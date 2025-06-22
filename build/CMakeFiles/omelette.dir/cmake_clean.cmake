@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/omelette.dir/VAO.cpp.o.d"
   "CMakeFiles/omelette.dir/VBO.cpp.o"
   "CMakeFiles/omelette.dir/VBO.cpp.o.d"
+  "CMakeFiles/omelette.dir/editor/Editor.cpp.o"
+  "CMakeFiles/omelette.dir/editor/Editor.cpp.o.d"
   "CMakeFiles/omelette.dir/glad/src/glad.c.o"
   "CMakeFiles/omelette.dir/glad/src/glad.c.o.d"
   "CMakeFiles/omelette.dir/imgui/imgui.cpp.o"

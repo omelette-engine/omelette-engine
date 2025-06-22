@@ -85,12 +85,12 @@ clean: CMakeFiles/omelette.dir/clean
 CMakeFiles/omelette.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/omelette.dir/build.make CMakeFiles/omelette.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/omelette.dir/build.make CMakeFiles/omelette.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target omelette"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Built target omelette"
 .PHONY : CMakeFiles/omelette.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/omelette.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shesahuman/stuff/omelette/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shesahuman/stuff/omelette/build/CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/omelette.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shesahuman/stuff/omelette/build/CMakeFiles 0
 .PHONY : CMakeFiles/omelette.dir/rule
@@ -102,7 +102,7 @@ omelette: CMakeFiles/omelette.dir/rule
 # codegen rule for target.
 CMakeFiles/omelette.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/omelette.dir/build.make CMakeFiles/omelette.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Finished codegen for target omelette"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Finished codegen for target omelette"
 .PHONY : CMakeFiles/omelette.dir/codegen
 
 # clean rule for target.

@@ -2,6 +2,12 @@
 #include <iostream>
 #include <cstdio>
 #include "no_abbreviations.h"
+#include <sstream>
+
+inline std::vector<std::string>& get_console_messages() {
+    static std::vector<std::string> console_log_messages;
+    return console_log_messages;
+}
 
 enum class print_level{
     debug,
@@ -28,6 +34,16 @@ namespace colours {
     constant_expression const char* dark_green = "\033[38;2;49;84;47m";      // #31542f
 }
 
+inline const char* level_to_string(print_level level) {
+    switch(level) {
+        case print_level::debug:   return "DEBUG";
+        case print_level::info:    return "INFO";
+        case print_level::warning: return "WARN";
+        case print_level::error:   return "ERROR";
+        default:                   return "UNKNOWN";
+    }
+}
+
 template<typename... args>
 inline void log(print_level level, const args&... arguments) {
     switch(level) {
@@ -45,6 +61,12 @@ inline void log(print_level level, const args&... arguments) {
             break;
     }
     (std::cout << ... << arguments) << '\n';
+
+    // pass messages to the in-engine console
+    std::stringstream string_stream;
+    string_stream << "[]" << level_to_string(level) << "]";
+    (string_stream << ... << arguments);
+    get_console_messages().push_back(string_stream.str());
 }
 
 template<typename... args>

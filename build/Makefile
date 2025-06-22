@@ -249,6 +249,30 @@ VBO.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/omelette.dir/build.make CMakeFiles/omelette.dir/VBO.cpp.s
 .PHONY : VBO.cpp.s
 
+editor/Editor.o: editor/Editor.cpp.o
+.PHONY : editor/Editor.o
+
+# target to build an object file
+editor/Editor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omelette.dir/build.make CMakeFiles/omelette.dir/editor/Editor.cpp.o
+.PHONY : editor/Editor.cpp.o
+
+editor/Editor.i: editor/Editor.cpp.i
+.PHONY : editor/Editor.i
+
+# target to preprocess a source file
+editor/Editor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omelette.dir/build.make CMakeFiles/omelette.dir/editor/Editor.cpp.i
+.PHONY : editor/Editor.cpp.i
+
+editor/Editor.s: editor/Editor.cpp.s
+.PHONY : editor/Editor.s
+
+# target to generate assembly for a file
+editor/Editor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omelette.dir/build.make CMakeFiles/omelette.dir/editor/Editor.cpp.s
+.PHONY : editor/Editor.cpp.s
+
 glad/src/glad.o: glad/src/glad.c.o
 .PHONY : glad/src/glad.o
 
@@ -513,6 +537,9 @@ help:
 	@echo "... VBO.o"
 	@echo "... VBO.i"
 	@echo "... VBO.s"
+	@echo "... editor/Editor.o"
+	@echo "... editor/Editor.i"
+	@echo "... editor/Editor.s"
 	@echo "... glad/src/glad.o"
 	@echo "... glad/src/glad.i"
 	@echo "... glad/src/glad.s"

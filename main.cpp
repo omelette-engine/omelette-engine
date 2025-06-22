@@ -7,10 +7,13 @@
 #include "Mesh.h"
 #include "VBO.h"
 #include "no_abbreviations.h"
-// #include "print_helper.h"
+#include "editor/Editor.h"
+#include "print_helper.h"
 
 const unsigned int window_width = 800;
 const unsigned int window_height = 800;
+
+Editor editor;
 
 dynamic_array<Vertex> vertices = {
     // Bottom face (y = 0)
@@ -158,9 +161,24 @@ int main(){
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO(); (void)io;
+    ImFont* victor_mono = io.Fonts->AddFontFromFileTTF("../third_party/fonts/victor_mono.ttf", 24.0f);
+
+    if(victor_mono == nullptr){
+        log_warning("failed to load victor mono! :(");
+    } else{
+        io.FontDefault = victor_mono;
+    }
+
     ImGui::StyleColorsDark();
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330");
+
+    ImGuiStyle& style = ImGui::GetStyle();
+    style.WindowBorderSize = 2.0f;
+    style.Colors[ImGuiCol_Border] = ImVec4(1.0f, 1.0f, 1.0f, 1.0f);
+    style.Colors[ImGuiCol_WindowBg] = ImVec4(0.16f, 0.12f, 0.10f, 1.0f);
+    style.WindowRounding = 8.0f;
+    style.Colors[ImGuiCol_Text] = ImVec4(0.831f, 0.827f, 0.82f, 1.0f);
 
     bool draw_pyramid = true;
 
@@ -189,6 +207,7 @@ int main(){
 
 
         // editor
+        editor.render();
         ImGui::Begin("my name is omelette, i'm an omelette");
         ImGui::Text("hello there omeletteer!");
         ImGui::Checkbox("wanna see a pyramid?", &draw_pyramid);
@@ -196,6 +215,8 @@ int main(){
 
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+        log_warning("warning! (psych, lol)");
 
 
         glfwSwapBuffers(window);

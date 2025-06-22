@@ -170,10 +170,24 @@ CMakeFiles/omelette.dir/Mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/omelette.dir/Mesh.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shesahuman/stuff/omelette/Mesh.cpp -o CMakeFiles/omelette.dir/Mesh.cpp.s
 
+CMakeFiles/omelette.dir/editor/Editor.cpp.o: CMakeFiles/omelette.dir/flags.make
+CMakeFiles/omelette.dir/editor/Editor.cpp.o: /home/shesahuman/stuff/omelette/editor/Editor.cpp
+CMakeFiles/omelette.dir/editor/Editor.cpp.o: CMakeFiles/omelette.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/omelette.dir/editor/Editor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omelette.dir/editor/Editor.cpp.o -MF CMakeFiles/omelette.dir/editor/Editor.cpp.o.d -o CMakeFiles/omelette.dir/editor/Editor.cpp.o -c /home/shesahuman/stuff/omelette/editor/Editor.cpp
+
+CMakeFiles/omelette.dir/editor/Editor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/omelette.dir/editor/Editor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shesahuman/stuff/omelette/editor/Editor.cpp > CMakeFiles/omelette.dir/editor/Editor.cpp.i
+
+CMakeFiles/omelette.dir/editor/Editor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/omelette.dir/editor/Editor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shesahuman/stuff/omelette/editor/Editor.cpp -o CMakeFiles/omelette.dir/editor/Editor.cpp.s
+
 CMakeFiles/omelette.dir/glad/src/glad.c.o: CMakeFiles/omelette.dir/flags.make
 CMakeFiles/omelette.dir/glad/src/glad.c.o: /home/shesahuman/stuff/omelette/glad/src/glad.c
 CMakeFiles/omelette.dir/glad/src/glad.c.o: CMakeFiles/omelette.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/omelette.dir/glad/src/glad.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/omelette.dir/glad/src/glad.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/omelette.dir/glad/src/glad.c.o -MF CMakeFiles/omelette.dir/glad/src/glad.c.o.d -o CMakeFiles/omelette.dir/glad/src/glad.c.o -c /home/shesahuman/stuff/omelette/glad/src/glad.c
 
 CMakeFiles/omelette.dir/glad/src/glad.c.i: cmake_force
@@ -187,7 +201,7 @@ CMakeFiles/omelette.dir/glad/src/glad.c.s: cmake_force
 CMakeFiles/omelette.dir/imgui/imgui.cpp.o: CMakeFiles/omelette.dir/flags.make
 CMakeFiles/omelette.dir/imgui/imgui.cpp.o: /home/shesahuman/stuff/omelette/imgui/imgui.cpp
 CMakeFiles/omelette.dir/imgui/imgui.cpp.o: CMakeFiles/omelette.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omelette.dir/imgui/imgui.cpp.o -MF CMakeFiles/omelette.dir/imgui/imgui.cpp.o.d -o CMakeFiles/omelette.dir/imgui/imgui.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui.cpp
 
 CMakeFiles/omelette.dir/imgui/imgui.cpp.i: cmake_force
@@ -201,7 +215,7 @@ CMakeFiles/omelette.dir/imgui/imgui.cpp.s: cmake_force
 CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o: CMakeFiles/omelette.dir/flags.make
 CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o: /home/shesahuman/stuff/omelette/imgui/imgui_demo.cpp
 CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o: CMakeFiles/omelette.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o -MF CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o.d -o CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui_demo.cpp
 
 CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.i: cmake_force
@@ -215,7 +229,7 @@ CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.s: cmake_force
 CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o: CMakeFiles/omelette.dir/flags.make
 CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o: /home/shesahuman/stuff/omelette/imgui/imgui_draw.cpp
 CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o: CMakeFiles/omelette.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o -MF CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o.d -o CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui_draw.cpp
 
 CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.i: cmake_force
@@ -229,7 +243,7 @@ CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.s: cmake_force
 CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.o: CMakeFiles/omelette.dir/flags.make
 CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.o: /home/shesahuman/stuff/omelette/imgui/imgui_impl_glfw.cpp
 CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.o: CMakeFiles/omelette.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.o -MF CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.o.d -o CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui_impl_glfw.cpp
 
 CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.i: cmake_force
@@ -243,7 +257,7 @@ CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.s: cmake_force
 CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.o: CMakeFiles/omelette.dir/flags.make
 CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.o: /home/shesahuman/stuff/omelette/imgui/imgui_impl_opengl3.cpp
 CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.o: CMakeFiles/omelette.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.o -MF CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui_impl_opengl3.cpp
 
 CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.i: cmake_force
@@ -257,7 +271,7 @@ CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.s: cmake_force
 CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o: CMakeFiles/omelette.dir/flags.make
 CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o: /home/shesahuman/stuff/omelette/imgui/imgui_tables.cpp
 CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o: CMakeFiles/omelette.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o -MF CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o.d -o CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui_tables.cpp
 
 CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.i: cmake_force
@@ -271,7 +285,7 @@ CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.s: cmake_force
 CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o: CMakeFiles/omelette.dir/flags.make
 CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o: /home/shesahuman/stuff/omelette/imgui/imgui_widgets.cpp
 CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o: CMakeFiles/omelette.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o -MF CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui_widgets.cpp
 
 CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.i: cmake_force
@@ -291,6 +305,7 @@ omelette_OBJECTS = \
 "CMakeFiles/omelette.dir/VBO.cpp.o" \
 "CMakeFiles/omelette.dir/Camera.cpp.o" \
 "CMakeFiles/omelette.dir/Mesh.cpp.o" \
+"CMakeFiles/omelette.dir/editor/Editor.cpp.o" \
 "CMakeFiles/omelette.dir/glad/src/glad.c.o" \
 "CMakeFiles/omelette.dir/imgui/imgui.cpp.o" \
 "CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o" \
@@ -310,6 +325,7 @@ omelette: CMakeFiles/omelette.dir/VAO.cpp.o
 omelette: CMakeFiles/omelette.dir/VBO.cpp.o
 omelette: CMakeFiles/omelette.dir/Camera.cpp.o
 omelette: CMakeFiles/omelette.dir/Mesh.cpp.o
+omelette: CMakeFiles/omelette.dir/editor/Editor.cpp.o
 omelette: CMakeFiles/omelette.dir/glad/src/glad.c.o
 omelette: CMakeFiles/omelette.dir/imgui/imgui.cpp.o
 omelette: CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o
@@ -322,7 +338,7 @@ omelette: CMakeFiles/omelette.dir/build.make
 omelette: CMakeFiles/omelette.dir/compiler_depend.ts
 omelette: /usr/lib/libglfw.so.3.4
 omelette: CMakeFiles/omelette.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable omelette"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shesahuman/stuff/omelette/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable omelette"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/omelette.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -24,6 +24,7 @@ set(SOURCES
     VBO.cpp
     Camera.cpp
     Mesh.cpp
+    editor/Editor.cpp
     glad/src/glad.c
     ${IMGUI_SOURCES}
 )

@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/shesahuman/stuff/omelette/Mesh.cpp" "CMakeFiles/omelette.dir/Mesh.cpp.o" "gcc" "CMakeFiles/omelette.dir/Mesh.cpp.o.d"
   "/home/shesahuman/stuff/omelette/VAO.cpp" "CMakeFiles/omelette.dir/VAO.cpp.o" "gcc" "CMakeFiles/omelette.dir/VAO.cpp.o.d"
   "/home/shesahuman/stuff/omelette/VBO.cpp" "CMakeFiles/omelette.dir/VBO.cpp.o" "gcc" "CMakeFiles/omelette.dir/VBO.cpp.o.d"
+  "/home/shesahuman/stuff/omelette/editor/Editor.cpp" "CMakeFiles/omelette.dir/editor/Editor.cpp.o" "gcc" "CMakeFiles/omelette.dir/editor/Editor.cpp.o.d"
   "/home/shesahuman/stuff/omelette/imgui/imgui.cpp" "CMakeFiles/omelette.dir/imgui/imgui.cpp.o" "gcc" "CMakeFiles/omelette.dir/imgui/imgui.cpp.o.d"
   "/home/shesahuman/stuff/omelette/imgui/imgui_demo.cpp" "CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o" "gcc" "CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o.d"
   "/home/shesahuman/stuff/omelette/imgui/imgui_draw.cpp" "CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o" "gcc" "CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o.d"
