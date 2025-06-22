@@ -1,25 +1,25 @@
 #include "shaderClass.h"
-#include <cstddef>
-#include <fstream>
+#include "no_abbreviations.h"
+#include "print_helper.h"
 
-std::string get_file_contents(const char* filename){
-    std::ifstream in(filename, std::ios::binary);
+string get_file_contents(const char* filename){
+    input_file_stream  in(filename, file_mode::binary);
     if(in){
-        std::string contents;
-        in.seekg(0, std::ios::end);
+        string contents;
+        in.seekg(0, file_mode::end);
         contents.resize(in.tellg());
-        in.seekg(0, std::ios::beg);
+        in.seekg(0, file_mode::beg);
         in.read(&contents[0], contents.size());
         in.close();
         return(contents);
     }
-    std::cout << "Failed to open file: " << filename << std::endl;
+    log_error("Failed to open file: ", filename);
     throw(errno);
 }
 
 Shader::Shader(const char* vertexFile, const char* fragmentFile){
-    std::string vertexCode = get_file_contents(vertexFile);
-    std::string fragmentCode = get_file_contents(fragmentFile);
+    string vertexCode = get_file_contents(vertexFile);
+    string fragmentCode = get_file_contents(fragmentFile);
 
     const char* vertexSource = vertexCode.c_str();
     const char* fragmentSource = fragmentCode.c_str();
@@ -55,18 +55,18 @@ void Shader::Delete(){
 void Shader::compileErrors(unsigned int shader, const char* type){
     GLint hasCompiled;
     char infoLog[1024];
-    if(std::string(type) != "PROGRAM"){
+    if(string(type) != "PROGRAM"){
         glGetShaderiv(shader, GL_COMPILE_STATUS, &hasCompiled);
         if(hasCompiled == GL_FALSE){
             glGetShaderInfoLog(shader, 1024, NULL, infoLog);
-            std::cout << "shader compilation error for " << type << "\n" << std::endl;
-            std::cout << infoLog << std::endl;
+            log_error("shader compilation error for: ", type);
+            log_info(infoLog);
         }
     } else{
         glGetProgramiv(shader, GL_LINK_STATUS, &hasCompiled);
         if(hasCompiled == GL_FALSE){
             glGetProgramInfoLog(shader, 1024, NULL, infoLog);
-            std::cout << "shader linking error for " << type << "\n" << infoLog << std::endl;
+            log_error("shader linking error for: ", type, infoLog);
         }
     }
 }

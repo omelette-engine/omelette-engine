@@ -1,5 +1,6 @@
 #ifndef CAMERA_CLASS_H
 #define CAMERA_CLASS_H
+#include "no_abbreviations.h"
 #include <glm/ext/vector_float3.hpp>
 #define GLM_ENABLE_EXPERIMENTAL
 
@@ -16,10 +17,10 @@
 
 class Camera{
     public:
-        glm::vec3 Position;
-        glm::vec3 Orientation = glm::vec3(0.0f, 0.0f, -1.0f);
-        glm::vec3 Up = glm::vec3(0.0f, 1.0f, 0.0f);
-        glm::mat4 camera_matrix = glm::mat4(1.0f);
+        vector3 Position;
+        vector3 Orientation = vector3(0.0f, 0.0f, -1.0f);
+        vector3 Up = vector3(0.0f, 1.0f, 0.0f);
+        matrix4 camera_matrix = matrix4(1.0f);
 
         bool first_click = true;
 
@@ -29,11 +30,13 @@ class Camera{
         float speed = 0.1f;
         float sensitivity = 2.0f;
 
-        Camera(int width, int height, glm::vec3 position);
+        Camera(int width, int height, vector3 position);
 
         void update_matrix(float FOVdeg, float nearPlane, float farPlane);
         void Matrix(Shader& shader, const char* uniform);
         void Inputs(GLFWwindow* window);
+        void update_aspect_ratio(float new_width, float new_height);
+        void Zoom(double y_offset);
 };
 
 

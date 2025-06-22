@@ -1,58 +1,49 @@
-// #include <cmath>
-#include <cstddef>
-#include <cstdio>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include <glm/ext/matrix_float4x4.hpp>
-#include <glm/ext/matrix_transform.hpp>
-#include <glm/ext/vector_float3.hpp>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
-#include <glm/trigonometric.hpp>
-
-// custom headers!
-#include "shaderClass.h"
-#include "VAO.h"
-#include "VBO.h"
-#include "EBO.h"
 #include "Camera.h"
+#include "imgui/imgui.h"
+#include "imgui/imgui_impl_glfw.h"
+#include "imgui/imgui_impl_opengl3.h"
+#include <GLFW/glfw3.h>
+
+#include "Mesh.h"
+#include "VBO.h"
+#include "no_abbreviations.h"
+// #include "print_helper.h"
 
 const unsigned int window_width = 800;
 const unsigned int window_height = 800;
 
-GLfloat vertices[] = {
+dynamic_array<Vertex> vertices = {
     // Bottom face (y = 0)
-    -0.5f, 0.0f,  0.5f,     0.83f, 0.70f, 0.44f,     0.0f, -1.0f, 0.0f, // 0
-    -0.5f, 0.0f, -0.5f,     0.83f, 0.70f, 0.44f,     0.0f, -1.0f, 0.0f, // 1
-     0.5f, 0.0f, -0.5f,     0.83f, 0.70f, 0.44f,     0.0f, -1.0f, 0.0f, // 2
-     0.5f, 0.0f,  0.5f,     0.83f, 0.70f, 0.44f,     0.0f, -1.0f, 0.0f, // 3
+    Vertex{vector3(-0.5f, 0.0f,  0.5f), vector3( 0.0f, -1.0f,  0.0f), vector3(0.83f, 0.70f, 0.44f)}, // 0
+    Vertex{vector3(-0.5f, 0.0f, -0.5f), vector3( 0.0f, -1.0f,  0.0f), vector3(0.83f, 0.70f, 0.44f)}, // 1
+    Vertex{vector3( 0.5f, 0.0f, -0.5f), vector3( 0.0f, -1.0f,  0.0f), vector3(0.83f, 0.70f, 0.44f)}, // 2
+    Vertex{vector3( 0.5f, 0.0f,  0.5f), vector3( 0.0f, -1.0f,  0.0f), vector3(0.83f, 0.70f, 0.44f)}, // 3
 
     // Apex vertex (for all triangular faces)
-     0.0f, 0.8f,  0.0f,     0.92f, 0.86f, 0.76f,     0.0f,  1.0f, 0.0f, // 4 (this normal will be overridden per face)
+    Vertex{vector3( 0.0f, 0.8f,  0.0f), vector3( 0.0f,  1.0f,  0.0f), vector3(0.92f, 0.86f, 0.76f)}, // 4
 
     // Left face vertices (reuse base vertices but with correct normals)
-    -0.5f, 0.0f,  0.5f,     0.83f, 0.70f, 0.44f,    -0.707f, 0.5f,  0.5f, // 5
-    -0.5f, 0.0f, -0.5f,     0.83f, 0.70f, 0.44f,    -0.707f, 0.5f, -0.5f, // 6
-     0.0f, 0.8f,  0.0f,     0.92f, 0.86f, 0.76f,    -0.707f, 0.707f, 0.0f, // 7
+    Vertex{vector3(-0.5f, 0.0f,  0.5f), vector3(-0.707f, 0.5f,  0.5f), vector3(0.83f, 0.70f, 0.44f)}, // 5
+    Vertex{vector3(-0.5f, 0.0f, -0.5f), vector3(-0.707f, 0.5f, -0.5f), vector3(0.83f, 0.70f, 0.44f)}, // 6
+    Vertex{vector3( 0.0f, 0.8f,  0.0f), vector3(-0.707f, 0.707f, 0.0f), vector3(0.92f, 0.86f, 0.76f)}, // 7
 
     // Back face vertices
-    -0.5f, 0.0f, -0.5f,     0.83f, 0.70f, 0.44f,     0.0f, 0.5f, -0.707f, // 8
-     0.5f, 0.0f, -0.5f,     0.83f, 0.70f, 0.44f,     0.0f, 0.5f, -0.707f, // 9
-     0.0f, 0.8f,  0.0f,     0.92f, 0.86f, 0.76f,     0.0f, 0.707f, -0.707f, // 10
+    Vertex{vector3(-0.5f, 0.0f, -0.5f), vector3( 0.0f, 0.5f, -0.707f), vector3(0.83f, 0.70f, 0.44f)}, // 8
+    Vertex{vector3( 0.5f, 0.0f, -0.5f), vector3( 0.0f, 0.5f, -0.707f), vector3(0.83f, 0.70f, 0.44f)}, // 9
+    Vertex{vector3( 0.0f, 0.8f,  0.0f), vector3( 0.0f, 0.707f, -0.707f), vector3(0.92f, 0.86f, 0.76f)}, // 10
 
     // Right face vertices  
-     0.5f, 0.0f, -0.5f,     0.83f, 0.70f, 0.44f,     0.707f, 0.5f, -0.5f, // 11
-     0.5f, 0.0f,  0.5f,     0.83f, 0.70f, 0.44f,     0.707f, 0.5f,  0.5f, // 12
-     0.0f, 0.8f,  0.0f,     0.92f, 0.86f, 0.76f,     0.707f, 0.707f, 0.0f, // 13
+    Vertex{vector3( 0.5f, 0.0f, -0.5f), vector3( 0.707f, 0.5f, -0.5f), vector3(0.83f, 0.70f, 0.44f)}, // 11
+    Vertex{vector3( 0.5f, 0.0f,  0.5f), vector3( 0.707f, 0.5f,  0.5f), vector3(0.83f, 0.70f, 0.44f)}, // 12
+    Vertex{vector3( 0.0f, 0.8f,  0.0f), vector3( 0.707f, 0.707f, 0.0f), vector3(0.92f, 0.86f, 0.76f)}, // 13
 
     // Front face vertices
-     0.5f, 0.0f,  0.5f,     0.83f, 0.70f, 0.44f,     0.0f, 0.5f,  0.707f, // 14
-    -0.5f, 0.0f,  0.5f,     0.83f, 0.70f, 0.44f,     0.0f, 0.5f,  0.707f, // 15
-     0.0f, 0.8f,  0.0f,     0.92f, 0.86f, 0.76f,     0.0f, 0.707f, 0.707f  // 16
+    Vertex{vector3( 0.5f, 0.0f,  0.5f), vector3( 0.0f, 0.5f,  0.707f), vector3(0.83f, 0.70f, 0.44f)}, // 14
+    Vertex{vector3(-0.5f, 0.0f,  0.5f), vector3( 0.0f, 0.5f,  0.707f), vector3(0.83f, 0.70f, 0.44f)}, // 15
+    Vertex{vector3( 0.0f, 0.8f,  0.0f), vector3( 0.0f, 0.707f, 0.707f), vector3(0.92f, 0.86f, 0.76f)}  // 16
 };
 
-GLuint indices[] = {
+dynamic_array<GLuint> indices = {
     // Bottom face (two triangles)
     0, 1, 2,
     0, 2, 3,
@@ -64,18 +55,18 @@ GLuint indices[] = {
     14, 16, 15  // Front face
 };
 
-GLfloat lightVertices[] = { //     COORDINATES     //
-	-0.1f, -0.1f,  0.1f,
-	-0.1f, -0.1f, -0.1f,
-	 0.1f, -0.1f, -0.1f,
-	 0.1f, -0.1f,  0.1f,
-	-0.1f,  0.1f,  0.1f,
-	-0.1f,  0.1f, -0.1f,
-	 0.1f,  0.1f, -0.1f,
-	 0.1f,  0.1f,  0.1f
+dynamic_array<Vertex> lightVertices = {
+	Vertex{vector3(-0.1f, -0.1f,  0.1f)},
+	Vertex{vector3(-0.1f, -0.1f, -0.1f)},
+	Vertex{vector3(0.1f, -0.1f, -0.1f)},
+	Vertex{vector3(0.1f, -0.1f,  0.1f)},
+	Vertex{vector3(-0.1f,  0.1f,  0.1f)},
+	Vertex{vector3(-0.1f,  0.1f, -0.1f)},
+	Vertex{vector3(0.1f,  0.1f, -0.1f)},
+	Vertex{vector3(0.1f,  0.1f,  0.1f)}
 };
 
-GLuint lightIndices[] = {
+dynamic_array<GLuint> lightIndices = {
 	0, 1, 2,
 	0, 2, 3,
 	0, 4, 7,
@@ -89,6 +80,21 @@ GLuint lightIndices[] = {
 	4, 5, 6,
 	4, 6, 7
 };
+
+void framebuffer_size_callback(GLFWwindow* window, int width, int height){
+    glViewport(0, 0, width, height);
+    Camera* camera = static_cast<Camera*>(glfwGetWindowUserPointer(window));
+    if(camera){
+        camera -> update_aspect_ratio((float)width, float(height));
+    }
+}
+
+void scroll_callback(GLFWwindow* window, double x_offset, double y_offset){
+    Camera* camera = static_cast<Camera*>(glfwGetWindowUserPointer(window));
+    if(camera){
+        camera -> Zoom(y_offset);
+    }
+}
 
 
 int main(){
@@ -104,7 +110,6 @@ int main(){
     // create a new window with some params, and throw an error if you can't for some reason
     GLFWwindow* window = glfwCreateWindow(window_width, window_height, "omelette engine", NULL, NULL);
     if(window == NULL){
-        std::cout << "failed to create glfw window" << std::endl;
         glfwTerminate();
         return -1;
     }
@@ -117,75 +122,81 @@ int main(){
      glViewport(0, 0, window_width, window_height);
 
      Shader shaderProgram("shaders/default.vert", "shaders/default.frag");
-
-     VAO VAO1;
-     VAO1.Bind();
-
-     VBO VBO1(vertices, sizeof(vertices));
-     EBO EBO1(indices, sizeof(indices));
-
-     VAO1.LinkAttrib(VBO1, 0, 3, GL_FLOAT, 9 * sizeof(float), (void*)0);
-     VAO1.LinkAttrib(VBO1, 1, 3, GL_FLOAT, 9 * sizeof(float), (void*)(3 * sizeof(float)));
-     VAO1.LinkAttrib(VBO1, 2, 3, GL_FLOAT, 9 * sizeof(float), (void*)(6 * sizeof(float)));
-     VAO1.Unbind();
-     VBO1.Unbind();
-     EBO1.Unbind();
+     Mesh pyramid(vertices, indices);
 
      Shader light_shader("shaders/light.vert", "shaders/light.frag");
+     Mesh point_light(lightVertices, lightIndices);
 
-     VAO light_vao;
-     light_vao.Bind();
-
-     VBO light_vbo(lightVertices, sizeof(lightVertices));
-     EBO light_ebo(lightIndices, sizeof(lightIndices));
-
-     light_vao.LinkAttrib(light_vbo, 0, 3, GL_FLOAT, 3 * sizeof(float), (void*)0);
-
-     light_vao.Unbind();
-     light_vbo.Unbind();
-     light_ebo.Unbind();
-
-     glm::vec4 light_colour = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+     vector4 light_colour = vector4(1.0f, 1.0f, 1.0f, 1.0f);
 
 
-     glm::vec3 light_position = glm::vec3(0.5f, 0.5f, 0.5f);
-     glm::mat4 light_model = glm::mat4(1.0f);
-     light_model = glm::translate(light_model, light_position);
+     vector3 light_position = vector3(0.5f, 0.5f, 0.5f);
+     matrix4 light_model = matrix4(1.0f);
+     light_model = translate_matrix(light_model, light_position);
 
-     glm::vec3 pyramid_position = glm::vec3(0.0f, 0.0f, 0.0f);
-     glm::mat4 pyramid_model = glm::mat4(1.0f);
-     pyramid_model = glm::translate(pyramid_model, pyramid_position);
+     vector3 pyramid_position = vector3(0.0f, 0.0f, 0.0f);
+     matrix4 pyramid_model = matrix4(1.0f);
+     pyramid_model = translate_matrix(pyramid_model, pyramid_position);
 
      light_shader.Activate();
-     glUniformMatrix4fv(glGetUniformLocation(light_shader.ID, "model"), 1, GL_FALSE, glm::value_ptr(light_model));
+     glUniformMatrix4fv(glGetUniformLocation(light_shader.ID, "model"), 1, GL_FALSE, get_raw_data(light_model));
      glUniform4f(glGetUniformLocation(light_shader.ID, "light_colour"), light_colour.x, light_colour.y, light_colour.z, light_colour.w);
      shaderProgram.Activate();
-     glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(pyramid_model));
+     glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, get_raw_data(pyramid_model));
      glUniform3f(glGetUniformLocation(shaderProgram.ID, "light_position"), light_position.x, light_position.y, light_position.z);
      glUniform3f(glGetUniformLocation(shaderProgram.ID, "lit_colour"), 1.0f, 0.8f, 0.6f);    // warm lit color
      glUniform3f(glGetUniformLocation(shaderProgram.ID, "shadow_colour"), 0.2f, 0.15f, 0.3f);  // cool shadow color
 
      glEnable(GL_DEPTH_TEST);
 
-     Camera camera(window_width, window_height, glm::vec3(0.0f, 0.0f, 2.0f));
+     Camera camera(window_width, window_height, vector3(0.0f, 0.0f, 2.0f));
+     glfwSetWindowUserPointer(window, &camera);
+     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
+
+    //  editor!
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    ImGui::StyleColorsDark();
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init("#version 330");
+
+    bool draw_pyramid = true;
+
 
     //  make sure the window doesn't immediately close
     while(!glfwWindowShouldClose(window)){
         glClearColor(0.161f, 0.118f, 0.102f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+
+
+        // scene view
         camera.Inputs(window);
         camera.update_matrix(45.0f, 0.1f, 100.0f);
         shaderProgram.Activate();
         camera.Matrix(shaderProgram, "camera_matrix");
 
-        VAO1.Bind();
-        glDrawElements(GL_TRIANGLES, sizeof(indices) / sizeof(int), GL_UNSIGNED_INT, 0);
+        if(draw_pyramid){
+            pyramid.Draw(shaderProgram, camera);
+        }
+        point_light.Draw(light_shader, camera);
 
-        light_shader.Activate();
-        camera.Matrix(light_shader, "camera_matrix");
-        light_vao.Bind();
-        glDrawElements(GL_TRIANGLES, sizeof(lightIndices) / sizeof(int), GL_UNSIGNED_INT, 0);
+
+
+        // editor
+        ImGui::Begin("my name is omelette, i'm an omelette");
+        ImGui::Text("hello there omeletteer!");
+        ImGui::Checkbox("wanna see a pyramid?", &draw_pyramid);
+        ImGui::End();
+
+        ImGui::Render();
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
 
         glfwSwapBuffers(window);
         glfwPollEvents();
@@ -194,10 +205,11 @@ int main(){
 
 
     // destroy everything when the program ends
-    VAO1.Delete();
-    VBO1.Delete();
-    EBO1.Delete();
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();
     shaderProgram.Delete();
+    light_shader.Delete();
     glfwDestroyWindow(window);
     glfwTerminate();
     return 0;

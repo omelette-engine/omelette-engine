@@ -1,0 +1,3 @@
+/home/shesahuman/stuff/omelette/build/CMakeFiles/omelette.dir
+/home/shesahuman/stuff/omelette/build/CMakeFiles/edit_cache.dir
+/home/shesahuman/stuff/omelette/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/omelette.dir/link.d"
+  "CMakeFiles/omelette.dir/Camera.cpp.o"
+  "CMakeFiles/omelette.dir/Camera.cpp.o.d"
+  "CMakeFiles/omelette.dir/EBO.cpp.o"
+  "CMakeFiles/omelette.dir/EBO.cpp.o.d"
+  "CMakeFiles/omelette.dir/Mesh.cpp.o"
+  "CMakeFiles/omelette.dir/Mesh.cpp.o.d"
+  "CMakeFiles/omelette.dir/VAO.cpp.o"
+  "CMakeFiles/omelette.dir/VAO.cpp.o.d"
+  "CMakeFiles/omelette.dir/VBO.cpp.o"
+  "CMakeFiles/omelette.dir/VBO.cpp.o.d"
+  "CMakeFiles/omelette.dir/glad/src/glad.c.o"
+  "CMakeFiles/omelette.dir/glad/src/glad.c.o.d"
+  "CMakeFiles/omelette.dir/imgui/imgui.cpp.o"
+  "CMakeFiles/omelette.dir/imgui/imgui.cpp.o.d"
+  "CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o"
+  "CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o.d"
+  "CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o"
+  "CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o.d"
+  "CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.o"
+  "CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.o.d"
+  "CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.o"
+  "CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.o.d"
+  "CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o"
+  "CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o.d"
+  "CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o"
+  "CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o.d"
+  "CMakeFiles/omelette.dir/main.cpp.o"
+  "CMakeFiles/omelette.dir/main.cpp.o.d"
+  "CMakeFiles/omelette.dir/shaderClass.cpp.o"
+  "CMakeFiles/omelette.dir/shaderClass.cpp.o.d"
+  "omelette"
+  "omelette.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C CXX)
+  include(CMakeFiles/omelette.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
