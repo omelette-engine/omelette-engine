@@ -1,5 +1,5 @@
 #include "VBO.h"
-#include "no_abbreviations.h"
+#include "omelette_style.h"
 
 
 VBO::VBO(dynamic_array<Vertex>& vertices){

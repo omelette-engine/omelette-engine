@@ -1,6 +1,6 @@
 #ifndef CAMERA_CLASS_H
 #define CAMERA_CLASS_H
-#include "no_abbreviations.h"
+#include "omelette_style.h"
 #include <glm/ext/vector_float3.hpp>
 #define GLM_ENABLE_EXPERIMENTAL
 

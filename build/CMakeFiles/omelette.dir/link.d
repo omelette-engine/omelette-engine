@@ -10,6 +10,7 @@ omelette: \
   CMakeFiles/omelette.dir/Camera.cpp.o \
   CMakeFiles/omelette.dir/Mesh.cpp.o \
   CMakeFiles/omelette.dir/editor/Editor.cpp.o \
+  CMakeFiles/omelette.dir/primitive_generator.cpp.o \
   CMakeFiles/omelette.dir/glad/src/glad.c.o \
   CMakeFiles/omelette.dir/imgui/imgui.cpp.o \
   CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o \
@@ -80,6 +81,8 @@ CMakeFiles/omelette.dir/Camera.cpp.o:
 CMakeFiles/omelette.dir/Mesh.cpp.o:
 
 CMakeFiles/omelette.dir/editor/Editor.cpp.o:
+
+CMakeFiles/omelette.dir/primitive_generator.cpp.o:
 
 CMakeFiles/omelette.dir/glad/src/glad.c.o:
 

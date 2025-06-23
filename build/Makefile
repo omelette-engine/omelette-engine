@@ -489,6 +489,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/omelette.dir/build.make CMakeFiles/omelette.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+primitive_generator.o: primitive_generator.cpp.o
+.PHONY : primitive_generator.o
+
+# target to build an object file
+primitive_generator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omelette.dir/build.make CMakeFiles/omelette.dir/primitive_generator.cpp.o
+.PHONY : primitive_generator.cpp.o
+
+primitive_generator.i: primitive_generator.cpp.i
+.PHONY : primitive_generator.i
+
+# target to preprocess a source file
+primitive_generator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omelette.dir/build.make CMakeFiles/omelette.dir/primitive_generator.cpp.i
+.PHONY : primitive_generator.cpp.i
+
+primitive_generator.s: primitive_generator.cpp.s
+.PHONY : primitive_generator.s
+
+# target to generate assembly for a file
+primitive_generator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/omelette.dir/build.make CMakeFiles/omelette.dir/primitive_generator.cpp.s
+.PHONY : primitive_generator.cpp.s
+
 shaderClass.o: shaderClass.cpp.o
 .PHONY : shaderClass.o
 
@@ -567,6 +591,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... primitive_generator.o"
+	@echo "... primitive_generator.i"
+	@echo "... primitive_generator.s"
 	@echo "... shaderClass.o"
 	@echo "... shaderClass.i"
 	@echo "... shaderClass.s"

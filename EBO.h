@@ -2,7 +2,7 @@
 #define EBO_CLASS_H
 
 #include <glad/glad.h>
-#include "no_abbreviations.h"
+#include "omelette_style.h"
 
 class EBO{
     public:

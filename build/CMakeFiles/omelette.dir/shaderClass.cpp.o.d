@@ -156,7 +156,7 @@ CMakeFiles/omelette.dir/shaderClass.cpp.o: \
  /usr/include/c++/15.1.1/bits/fstream.tcc /usr/include/c++/15.1.1/sstream \
  /usr/include/c++/15.1.1/bits/sstream.tcc \
  /usr/include/c++/15.1.1/iostream \
- /home/shesahuman/stuff/omelette/no_abbreviations.h \
+ /home/shesahuman/stuff/omelette/omelette_style.h \
  /usr/include/c++/15.1.1/vector \
  /usr/include/c++/15.1.1/bits/stl_uninitialized.h \
  /usr/include/c++/15.1.1/bits/stl_vector.h \

@@ -1,7 +1,7 @@
 CMakeFiles/omelette.dir/VBO.cpp.o: \
  /home/shesahuman/stuff/omelette/VBO.cpp /usr/include/stdc-predef.h \
  /home/shesahuman/stuff/omelette/VBO.h \
- /home/shesahuman/stuff/omelette/no_abbreviations.h \
+ /home/shesahuman/stuff/omelette/omelette_style.h \
  /usr/include/c++/15.1.1/vector \
  /usr/include/c++/15.1.1/bits/requires_hosted.h \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++config.h \

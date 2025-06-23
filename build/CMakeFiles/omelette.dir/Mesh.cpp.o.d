@@ -108,7 +108,7 @@ CMakeFiles/omelette.dir/Mesh.cpp.o: \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h /home/shesahuman/stuff/omelette/VBO.h \
- /home/shesahuman/stuff/omelette/no_abbreviations.h \
+ /home/shesahuman/stuff/omelette/omelette_style.h \
  /usr/include/c++/15.1.1/vector \
  /usr/include/c++/15.1.1/bits/stl_uninitialized.h \
  /usr/include/c++/15.1.1/bits/stl_vector.h \

@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <cstdio>
-#include "no_abbreviations.h"
+#include "omelette_style.h"
 #include <sstream>
 
 inline std::vector<std::string>& get_console_messages() {
@@ -29,7 +29,7 @@ namespace colours {
     constant_expression const char* olive = "\033[38;2;57;62;38m";           // #393e26
     constant_expression const char* teal = "\033[38;2;73;102;105m";          // #496669
     constant_expression const char* blue = "\033[38;2;118;135;171m";         // #7687ab
-    constant_expression const char* light_gray = "\033[38;2;212;211;209m";   // #d4d3d1
+    constant_expression const char* light_grey = "\033[38;2;212;211;209m";   // #d4d3d1
     constant_expression const char* lime = "\033[38;2;116;139;44m";          // #748b2c
     constant_expression const char* dark_green = "\033[38;2;49;84;47m";      // #31542f
 }
@@ -48,7 +48,7 @@ template<typename... args>
 inline void log(print_level level, const args&... arguments) {
     switch(level) {
         case print_level::debug:   
-            std::cout << colours::light_gray << "[DEBUG] " << colours::reset; 
+            std::cout << colours::light_grey << "[DEBUG] " << colours::reset; 
             break;
         case print_level::info:    
             std::cout << colours::blue << "[INFO] " << colours::reset;  
@@ -57,14 +57,14 @@ inline void log(print_level level, const args&... arguments) {
             std::cout << colours::gold << "[WARN] " << colours::reset;  
             break;
         case print_level::error:   
-            std::cout << colours::orange << "[ERROR] " << colours::reset; 
+            std::cout << colours::red << "[ERROR] " << colours::reset; 
             break;
     }
     (std::cout << ... << arguments) << '\n';
 
     // pass messages to the in-engine console
     std::stringstream string_stream;
-    string_stream << "[]" << level_to_string(level) << "]";
+    string_stream << "[" << level_to_string(level) << "] ";
     (string_stream << ... << arguments);
     get_console_messages().push_back(string_stream.str());
 }

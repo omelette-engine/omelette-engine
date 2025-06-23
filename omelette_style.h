@@ -25,6 +25,9 @@ using string = std::string;
 using input_file_stream = std::ifstream;
 using file_mode = std::ios;
 
+template<typename type>
+using dynamic_array = std::vector<type>;
+
 
 inline matrix4 look_at(const vector3& eye, const vector3& centre, const vector3& up){
     return glm::lookAt(eye, centre, up);
@@ -75,5 +78,9 @@ inline matrix4 translate_matrix(const matrix4& matrix, const vector3& translatio
     return glm::translate(matrix, translation);
 }
 
-template<typename type>
-using dynamic_array = std::vector<type>;
+inline float get_percentage(float percentage){
+    return percentage / 100.0f;
+}
+
+const vector3 default_colour = vector3(0.286f, 0.400f, 0.412f);
+const vector3 default_shadow = vector3(0.161f, 0.118f, 0.102f);

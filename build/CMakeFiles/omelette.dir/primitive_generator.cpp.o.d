@@ -1,6 +1,7 @@
-CMakeFiles/omelette.dir/Camera.cpp.o: \
- /home/shesahuman/stuff/omelette/Camera.cpp /usr/include/stdc-predef.h \
- /home/shesahuman/stuff/omelette/Camera.h \
+CMakeFiles/omelette.dir/primitive_generator.cpp.o: \
+ /home/shesahuman/stuff/omelette/primitive_generator.cpp \
+ /usr/include/stdc-predef.h \
+ /home/shesahuman/stuff/omelette/primitive_generator.h \
  /home/shesahuman/stuff/omelette/omelette_style.h \
  /usr/include/c++/15.1.1/vector \
  /usr/include/c++/15.1.1/bits/requires_hosted.h \
@@ -363,10 +364,14 @@ CMakeFiles/omelette.dir/Camera.cpp.o: \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/15.1.1/bits/fstream.tcc \
+ /home/shesahuman/stuff/omelette/Mesh.h \
+ /home/shesahuman/stuff/omelette/VAO.h \
  /home/shesahuman/stuff/omelette/glad/include/glad/glad.h \
  /home/shesahuman/stuff/omelette/glad/include/KHR/khrplatform.h \
- /usr/include/GLFW/glfw3.h /home/shesahuman/stuff/omelette/shaderClass.h \
+ /home/shesahuman/stuff/omelette/VBO.h \
+ /home/shesahuman/stuff/omelette/EBO.h \
+ /home/shesahuman/stuff/omelette/Camera.h /usr/include/GLFW/glfw3.h \
+ /home/shesahuman/stuff/omelette/shaderClass.h \
  /usr/include/c++/15.1.1/sstream /usr/include/c++/15.1.1/bits/sstream.tcc \
  /usr/include/c++/15.1.1/iostream \
- /home/shesahuman/stuff/omelette/imgui/imgui.h \
- /home/shesahuman/stuff/omelette/imgui/imconfig.h
+ /home/shesahuman/stuff/omelette/print_helper.h

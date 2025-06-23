@@ -6,6 +6,7 @@
 #include"VAO.h"
 #include"EBO.h"
 #include"Camera.h"
+#include "omelette_style.h"
 
 class Mesh {
 public:
@@ -17,5 +18,7 @@ public:
 	Mesh(dynamic_array<Vertex>& vertices, dynamic_array<GLuint>& indices);
 
 	void Draw(Shader& shader, Camera& camera);
+
+	void render();
 };
 #endif

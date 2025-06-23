@@ -13,7 +13,7 @@ CMakeFiles/omelette.dir/VAO.cpp.o: \
  /usr/include/bits/time64.h /usr/include/bits/wchar.h \
  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h /home/shesahuman/stuff/omelette/VBO.h \
- /home/shesahuman/stuff/omelette/no_abbreviations.h \
+ /home/shesahuman/stuff/omelette/omelette_style.h \
  /usr/include/c++/15.1.1/vector \
  /usr/include/c++/15.1.1/bits/requires_hosted.h \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++config.h \

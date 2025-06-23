@@ -8,7 +8,7 @@
 #include<iostream>
 #include<cerrno>
 
-#include "no_abbreviations.h"
+#include "omelette_style.h"
 
 string get_file_contents(const char* filename);
 

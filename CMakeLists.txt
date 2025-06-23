@@ -25,6 +25,7 @@ set(SOURCES
     Camera.cpp
     Mesh.cpp
     editor/Editor.cpp
+    primitive_generator.cpp
     glad/src/glad.c
     ${IMGUI_SOURCES}
 )

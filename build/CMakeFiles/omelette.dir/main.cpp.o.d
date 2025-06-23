@@ -1,7 +1,7 @@
 CMakeFiles/omelette.dir/main.cpp.o: \
  /home/shesahuman/stuff/omelette/main.cpp /usr/include/stdc-predef.h \
  /home/shesahuman/stuff/omelette/Camera.h \
- /home/shesahuman/stuff/omelette/no_abbreviations.h \
+ /home/shesahuman/stuff/omelette/omelette_style.h \
  /usr/include/c++/15.1.1/vector \
  /usr/include/c++/15.1.1/bits/requires_hosted.h \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -376,5 +376,7 @@ CMakeFiles/omelette.dir/main.cpp.o: \
  /home/shesahuman/stuff/omelette/VAO.h \
  /home/shesahuman/stuff/omelette/VBO.h \
  /home/shesahuman/stuff/omelette/EBO.h \
+ /home/shesahuman/stuff/omelette/World.h \
+ /home/shesahuman/stuff/omelette/Object.h \
  /home/shesahuman/stuff/omelette/editor/Editor.h \
  /home/shesahuman/stuff/omelette/print_helper.h

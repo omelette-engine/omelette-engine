@@ -6,14 +6,17 @@
 
 #include "Mesh.h"
 #include "VBO.h"
-#include "no_abbreviations.h"
+#include "World.h"
+#include "omelette_style.h"
 #include "editor/Editor.h"
 #include "print_helper.h"
 
 const unsigned int window_width = 800;
 const unsigned int window_height = 800;
 
-Editor editor;
+// Editor editor;
+World world;
+Editor editor(world);
 
 dynamic_array<Vertex> vertices = {
     // Bottom face (y = 0)
@@ -99,11 +102,9 @@ void scroll_callback(GLFWwindow* window, double x_offset, double y_offset){
     }
 }
 
-
 int main(){
     // initialise glfw
     glfwInit();
-
 
     // tell glfw what opengl version we're using
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -118,112 +119,85 @@ int main(){
     }
 
     // even though we told the computer to make a window, we still have to tell it to _show_ the window
-     glfwMakeContextCurrent(window);
-     gladLoadGL();
-     
+    glfwMakeContextCurrent(window);
+    gladLoadGL();
+    
+    glViewport(0, 0, window_width, window_height);
+    glEnable(GL_DEPTH_TEST);
 
-     glViewport(0, 0, window_width, window_height);
+    // ========== initialisation ==========
+    
+    // initialise shaders
+    Shader shaderProgram("shaders/default.vert", "shaders/default.frag");
+    Shader light_shader("shaders/light.vert", "shaders/light.frag");
+    
+    // initialise meshes
+    Mesh pyramid(vertices, indices);
+    Mesh point_light(lightVertices, lightIndices);
 
-     Shader shaderProgram("shaders/default.vert", "shaders/default.frag");
-     Mesh pyramid(vertices, indices);
+    // light properties
+    vector4 light_colour = vector4(0.831f, 0.827f, 0.820f, 1.0f);
+    vector3 light_position = vector3(0.5f, 0.5f, 0.5f);
 
-     Shader light_shader("shaders/light.vert", "shaders/light.frag");
-     Mesh point_light(lightVertices, lightIndices);
+    // add objects
+    // world.add_object("Pyramid", &pyramid, vector3(0.0f, 0.0f, 0.0f), default_colour, default_shadow);
+    world.add_object("Point Light", &point_light, light_position, light_colour, light_colour);
+    log_info("Light cube position: " + std::to_string(light_position.x) + ", " + std::to_string(light_position.y) + ", " + std::to_string(light_position.z));
 
-     vector4 light_colour = vector4(1.0f, 1.0f, 1.0f, 1.0f);
+    // camera
+    Camera camera(window_width, window_height, vector3(0.0f, 0.0f, 2.0f));
+    glfwSetWindowUserPointer(window, &camera);
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwSetScrollCallback(window, scroll_callback);
 
+    // editor
+    editor.initialise(window);
 
-     vector3 light_position = vector3(0.5f, 0.5f, 0.5f);
-     matrix4 light_model = matrix4(1.0f);
-     light_model = translate_matrix(light_model, light_position);
-
-     vector3 pyramid_position = vector3(0.0f, 0.0f, 0.0f);
-     matrix4 pyramid_model = matrix4(1.0f);
-     pyramid_model = translate_matrix(pyramid_model, pyramid_position);
-
-     light_shader.Activate();
-     glUniformMatrix4fv(glGetUniformLocation(light_shader.ID, "model"), 1, GL_FALSE, get_raw_data(light_model));
-     glUniform4f(glGetUniformLocation(light_shader.ID, "light_colour"), light_colour.x, light_colour.y, light_colour.z, light_colour.w);
-     shaderProgram.Activate();
-     glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, get_raw_data(pyramid_model));
-     glUniform3f(glGetUniformLocation(shaderProgram.ID, "light_position"), light_position.x, light_position.y, light_position.z);
-     glUniform3f(glGetUniformLocation(shaderProgram.ID, "lit_colour"), 1.0f, 0.8f, 0.6f);    // warm lit color
-     glUniform3f(glGetUniformLocation(shaderProgram.ID, "shadow_colour"), 0.2f, 0.15f, 0.3f);  // cool shadow color
-
-     glEnable(GL_DEPTH_TEST);
-
-     Camera camera(window_width, window_height, vector3(0.0f, 0.0f, 2.0f));
-     glfwSetWindowUserPointer(window, &camera);
-     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-
-
-    //  editor!
-    IMGUI_CHECKVERSION();
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO(); (void)io;
-    ImFont* victor_mono = io.Fonts->AddFontFromFileTTF("../third_party/fonts/victor_mono.ttf", 24.0f);
-
-    if(victor_mono == nullptr){
-        log_warning("failed to load victor mono! :(");
-    } else{
-        io.FontDefault = victor_mono;
-    }
-
-    ImGui::StyleColorsDark();
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 330");
-
-    ImGuiStyle& style = ImGui::GetStyle();
-    style.WindowBorderSize = 2.0f;
-    style.Colors[ImGuiCol_Border] = ImVec4(1.0f, 1.0f, 1.0f, 1.0f);
-    style.Colors[ImGuiCol_WindowBg] = ImVec4(0.16f, 0.12f, 0.10f, 1.0f);
-    style.WindowRounding = 8.0f;
-    style.Colors[ImGuiCol_Text] = ImVec4(0.831f, 0.827f, 0.82f, 1.0f);
-
-    bool draw_pyramid = true;
-
-
-    //  make sure the window doesn't immediately close
+    // ========== main loop ==========
     while(!glfwWindowShouldClose(window)){
         glClearColor(0.161f, 0.118f, 0.102f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
-
-
-        // scene view
+        // camera
         camera.Inputs(window);
         camera.update_matrix(45.0f, 0.1f, 100.0f);
+
+        // rendering objects
         shaderProgram.Activate();
         camera.Matrix(shaderProgram, "camera_matrix");
+        glUniform3f(glGetUniformLocation(shaderProgram.ID, "camera_position"), camera.Position.x, camera.Position.y, camera.Position.z);
+        glUniform3f(glGetUniformLocation(shaderProgram.ID, "light_position"), light_position.x, light_position.y, light_position.z);
 
-        if(draw_pyramid){
-            pyramid.Draw(shaderProgram, camera);
+        for(const auto& obj : world.get_objects()) {
+            if(obj.name != "Point Light") {
+                // Set all uniforms FIRST
+                glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, get_raw_data(obj.model_matrix));
+                glUniform3f(glGetUniformLocation(shaderProgram.ID, "lit_colour"), obj.lit_colour.x, obj.lit_colour.y, obj.lit_colour.z);
+                glUniform3f(glGetUniformLocation(shaderProgram.ID, "shadow_colour"), obj.shadow_colour.x, obj.shadow_colour.y, obj.shadow_colour.z);
+                
+                // THEN render
+                obj.mesh->render();
+            }
         }
-        point_light.Draw(light_shader, camera);
+        
+        light_shader.Activate();
+        camera.Matrix(light_shader, "camera_matrix");
+        glUniform3f(glGetUniformLocation(light_shader.ID, "camera_position"), camera.Position.x, camera.Position.y, camera.Position.z);
+        if(!world.get_objects().empty()) {
+            const auto& light_obj = world.get_objects()[0];
+            glUniformMatrix4fv(glGetUniformLocation(light_shader.ID, "model"), 1, GL_FALSE, get_raw_data(light_obj.model_matrix));
+            glUniform4f(glGetUniformLocation(light_shader.ID, "light_colour"), light_colour.x, light_colour.y, light_colour.z, light_colour.w);
+            light_obj.mesh->render();
+        }
 
-
-
-        // editor
+        editor.begin_frame();
         editor.render();
-        ImGui::Begin("my name is omelette, i'm an omelette");
-        ImGui::Text("hello there omeletteer!");
-        ImGui::Checkbox("wanna see a pyramid?", &draw_pyramid);
-        ImGui::End();
-
-        ImGui::Render();
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
-        log_warning("warning! (psych, lol)");
-
+        editor.end_frame();
 
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
     // glDeleteProgram(shaderProgram); // line #100!
-
 
     // destroy everything when the program ends
     ImGui_ImplOpenGL3_Shutdown();

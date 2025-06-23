@@ -1,7 +1,7 @@
 #include"Camera.h"
 #include "imgui/imgui.h"
 #include <GLFW/glfw3.h>
-#include "no_abbreviations.h"
+#include "omelette_style.h"
 
 
 Camera::Camera(int width, int height, vector3 position){

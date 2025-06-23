@@ -30,6 +30,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o.d"
   "CMakeFiles/omelette.dir/main.cpp.o"
   "CMakeFiles/omelette.dir/main.cpp.o.d"
+  "CMakeFiles/omelette.dir/primitive_generator.cpp.o"
+  "CMakeFiles/omelette.dir/primitive_generator.cpp.o.d"
   "CMakeFiles/omelette.dir/shaderClass.cpp.o"
   "CMakeFiles/omelette.dir/shaderClass.cpp.o.d"
   "omelette"

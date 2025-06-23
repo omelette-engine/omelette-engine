@@ -1,7 +1,7 @@
 #ifndef VBO_CLASS_H
 #define VBO_CLASS_H
 
-#include "no_abbreviations.h"
+#include "omelette_style.h"
 #include <glm/glm.hpp>
 #include <glad/glad.h>
 #include <vector>

@@ -1,7 +1,7 @@
 #include "Mesh.h"
 #include "Camera.h"
 #include "shaderClass.h"
-#include "no_abbreviations.h"
+#include "omelette_style.h"
 
 Mesh::Mesh(dynamic_array<Vertex>& vertices, dynamic_array<GLuint>& indices)
 {
@@ -21,6 +21,12 @@ Mesh::Mesh(dynamic_array<Vertex>& vertices, dynamic_array<GLuint>& indices)
 	vao.Unbind();
 	VBO.Unbind();
 	EBO.Unbind();
+}
+
+void Mesh::render(){
+	vao.Bind();
+	glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
+	vao.Unbind();
 }
 
 void Mesh::Draw(Shader& shader, Camera& camera){
