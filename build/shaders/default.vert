@@ -12,7 +12,7 @@ uniform mat4 model;
 
 void main(){
    current_position = vec3(model * vec4(position_attribute, 1.0f));
-   vertex_normal = normal_attribute;
+   vertex_normal = mat3(model) * normal_attribute;
    colour = colour_attribute;
    gl_Position = camera_matrix * vec4(current_position, 1.0);
 }

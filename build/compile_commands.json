@@ -1,0 +1,104 @@
+[
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/main.cpp.o -c /home/shesahuman/stuff/omelette/main.cpp",
+  "file": "/home/shesahuman/stuff/omelette/main.cpp",
+  "output": "CMakeFiles/omelette.dir/main.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/EBO.cpp.o -c /home/shesahuman/stuff/omelette/EBO.cpp",
+  "file": "/home/shesahuman/stuff/omelette/EBO.cpp",
+  "output": "CMakeFiles/omelette.dir/EBO.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/shaderClass.cpp.o -c /home/shesahuman/stuff/omelette/shaderClass.cpp",
+  "file": "/home/shesahuman/stuff/omelette/shaderClass.cpp",
+  "output": "CMakeFiles/omelette.dir/shaderClass.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/VAO.cpp.o -c /home/shesahuman/stuff/omelette/VAO.cpp",
+  "file": "/home/shesahuman/stuff/omelette/VAO.cpp",
+  "output": "CMakeFiles/omelette.dir/VAO.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/VBO.cpp.o -c /home/shesahuman/stuff/omelette/VBO.cpp",
+  "file": "/home/shesahuman/stuff/omelette/VBO.cpp",
+  "output": "CMakeFiles/omelette.dir/VBO.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/Camera.cpp.o -c /home/shesahuman/stuff/omelette/Camera.cpp",
+  "file": "/home/shesahuman/stuff/omelette/Camera.cpp",
+  "output": "CMakeFiles/omelette.dir/Camera.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/Mesh.cpp.o -c /home/shesahuman/stuff/omelette/Mesh.cpp",
+  "file": "/home/shesahuman/stuff/omelette/Mesh.cpp",
+  "output": "CMakeFiles/omelette.dir/Mesh.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/editor/Editor.cpp.o -c /home/shesahuman/stuff/omelette/editor/Editor.cpp",
+  "file": "/home/shesahuman/stuff/omelette/editor/Editor.cpp",
+  "output": "CMakeFiles/omelette.dir/editor/Editor.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/primitive_generator.cpp.o -c /home/shesahuman/stuff/omelette/primitive_generator.cpp",
+  "file": "/home/shesahuman/stuff/omelette/primitive_generator.cpp",
+  "output": "CMakeFiles/omelette.dir/primitive_generator.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/cc  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui  -o CMakeFiles/omelette.dir/glad/src/glad.c.o -c /home/shesahuman/stuff/omelette/glad/src/glad.c",
+  "file": "/home/shesahuman/stuff/omelette/glad/src/glad.c",
+  "output": "CMakeFiles/omelette.dir/glad/src/glad.c.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/imgui/imgui.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui.cpp",
+  "file": "/home/shesahuman/stuff/omelette/imgui/imgui.cpp",
+  "output": "CMakeFiles/omelette.dir/imgui/imgui.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui_demo.cpp",
+  "file": "/home/shesahuman/stuff/omelette/imgui/imgui_demo.cpp",
+  "output": "CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui_draw.cpp",
+  "file": "/home/shesahuman/stuff/omelette/imgui/imgui_draw.cpp",
+  "output": "CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui_impl_glfw.cpp",
+  "file": "/home/shesahuman/stuff/omelette/imgui/imgui_impl_glfw.cpp",
+  "output": "CMakeFiles/omelette.dir/imgui/imgui_impl_glfw.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui_impl_opengl3.cpp",
+  "file": "/home/shesahuman/stuff/omelette/imgui/imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles/omelette.dir/imgui/imgui_impl_opengl3.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui_tables.cpp",
+  "file": "/home/shesahuman/stuff/omelette/imgui/imgui_tables.cpp",
+  "output": "CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o"
+},
+{
+  "directory": "/home/shesahuman/stuff/omelette/build",
+  "command": "/usr/bin/c++  -I/home/shesahuman/stuff/omelette/glad/include -I/home/shesahuman/stuff/omelette/imgui -std=gnu++17 -o CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o -c /home/shesahuman/stuff/omelette/imgui/imgui_widgets.cpp",
+  "file": "/home/shesahuman/stuff/omelette/imgui/imgui_widgets.cpp",
+  "output": "CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o"
+}
+]

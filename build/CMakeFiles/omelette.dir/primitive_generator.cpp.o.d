@@ -370,8 +370,6 @@ CMakeFiles/omelette.dir/primitive_generator.cpp.o: \
  /home/shesahuman/stuff/omelette/glad/include/KHR/khrplatform.h \
  /home/shesahuman/stuff/omelette/VBO.h \
  /home/shesahuman/stuff/omelette/EBO.h \
- /home/shesahuman/stuff/omelette/Camera.h /usr/include/GLFW/glfw3.h \
- /home/shesahuman/stuff/omelette/shaderClass.h \
- /usr/include/c++/15.1.1/sstream /usr/include/c++/15.1.1/bits/sstream.tcc \
- /usr/include/c++/15.1.1/iostream \
- /home/shesahuman/stuff/omelette/print_helper.h
+ /home/shesahuman/stuff/omelette/print_helper.h \
+ /usr/include/c++/15.1.1/iostream /usr/include/c++/15.1.1/sstream \
+ /usr/include/c++/15.1.1/bits/sstream.tcc

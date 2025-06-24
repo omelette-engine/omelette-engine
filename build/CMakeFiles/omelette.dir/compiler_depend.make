@@ -3,11 +3,22 @@
 
 CMakeFiles/omelette.dir/Camera.cpp.o: /home/shesahuman/stuff/omelette/Camera.cpp \
   /home/shesahuman/stuff/omelette/Camera.h \
-  /home/shesahuman/stuff/omelette/glad/include/KHR/khrplatform.h \
-  /home/shesahuman/stuff/omelette/glad/include/glad/glad.h \
+  /home/shesahuman/stuff/omelette/AABB.h \
+  /home/shesahuman/stuff/omelette/EBO.h \
+  /home/shesahuman/stuff/omelette/Mesh.h \
+  /home/shesahuman/stuff/omelette/Object.h \
+  /home/shesahuman/stuff/omelette/VAO.h \
+  /home/shesahuman/stuff/omelette/VBO.h \
+  /home/shesahuman/stuff/omelette/World.h \
   /home/shesahuman/stuff/omelette/imgui/imconfig.h \
   /home/shesahuman/stuff/omelette/imgui/imgui.h \
+  /home/shesahuman/stuff/omelette/imgui/imgui_impl_glfw.h \
+  /home/shesahuman/stuff/omelette/imgui/imgui_impl_opengl3.h \
   /home/shesahuman/stuff/omelette/omelette_style.h \
+  /home/shesahuman/stuff/omelette/editor/Editor.h \
+  /home/shesahuman/stuff/omelette/glad/include/KHR/khrplatform.h \
+  /home/shesahuman/stuff/omelette/glad/include/glad/glad.h \
+  /home/shesahuman/stuff/omelette/print_helper.h \
   /home/shesahuman/stuff/omelette/shaderClass.h \
   /usr/include/GLFW/glfw3.h \
   /usr/include/alloca.h \
@@ -99,8 +110,10 @@ CMakeFiles/omelette.dir/Camera.cpp.o: /home/shesahuman/stuff/omelette/Camera.cpp
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
   /usr/include/bits/xopen_lim.h \
+  /usr/include/c++/15.1.1/algorithm \
   /usr/include/c++/15.1.1/backward/binders.h \
   /usr/include/c++/15.1.1/bit \
+  /usr/include/c++/15.1.1/bits/algorithmfwd.h \
   /usr/include/c++/15.1.1/bits/alloc_traits.h \
   /usr/include/c++/15.1.1/bits/allocator.h \
   /usr/include/c++/15.1.1/bits/basic_ios.h \
@@ -146,20 +159,24 @@ CMakeFiles/omelette.dir/Camera.cpp.o: /home/shesahuman/stuff/omelette/Camera.cpp
   /usr/include/c++/15.1.1/bits/specfun.h \
   /usr/include/c++/15.1.1/bits/sstream.tcc \
   /usr/include/c++/15.1.1/bits/std_abs.h \
+  /usr/include/c++/15.1.1/bits/stl_algo.h \
   /usr/include/c++/15.1.1/bits/stl_algobase.h \
   /usr/include/c++/15.1.1/bits/stl_bvector.h \
   /usr/include/c++/15.1.1/bits/stl_construct.h \
   /usr/include/c++/15.1.1/bits/stl_function.h \
+  /usr/include/c++/15.1.1/bits/stl_heap.h \
   /usr/include/c++/15.1.1/bits/stl_iterator.h \
   /usr/include/c++/15.1.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15.1.1/bits/stl_iterator_base_types.h \
   /usr/include/c++/15.1.1/bits/stl_pair.h \
+  /usr/include/c++/15.1.1/bits/stl_tempbuf.h \
   /usr/include/c++/15.1.1/bits/stl_uninitialized.h \
   /usr/include/c++/15.1.1/bits/stl_vector.h \
   /usr/include/c++/15.1.1/bits/streambuf.tcc \
   /usr/include/c++/15.1.1/bits/streambuf_iterator.h \
   /usr/include/c++/15.1.1/bits/string_view.tcc \
   /usr/include/c++/15.1.1/bits/stringfwd.h \
+  /usr/include/c++/15.1.1/bits/uniform_int_dist.h \
   /usr/include/c++/15.1.1/bits/uses_allocator.h \
   /usr/include/c++/15.1.1/bits/uses_allocator_args.h \
   /usr/include/c++/15.1.1/bits/utility.h \
@@ -197,6 +214,8 @@ CMakeFiles/omelette.dir/Camera.cpp.o: /home/shesahuman/stuff/omelette/Camera.cpp
   /usr/include/c++/15.1.1/limits \
   /usr/include/c++/15.1.1/new \
   /usr/include/c++/15.1.1/ostream \
+  /usr/include/c++/15.1.1/pstl/execution_defs.h \
+  /usr/include/c++/15.1.1/pstl/glue_algorithm_defs.h \
   /usr/include/c++/15.1.1/pstl/pstl_config.h \
   /usr/include/c++/15.1.1/sstream \
   /usr/include/c++/15.1.1/stdexcept \
@@ -934,6 +953,15 @@ CMakeFiles/omelette.dir/Mesh.cpp.o: /home/shesahuman/stuff/omelette/Mesh.cpp \
   /home/shesahuman/stuff/omelette/Mesh.h \
   /home/shesahuman/stuff/omelette/VAO.h \
   /home/shesahuman/stuff/omelette/VBO.h \
+  /home/shesahuman/stuff/omelette/AABB.h \
+  /home/shesahuman/stuff/omelette/Mesh.h \
+  /home/shesahuman/stuff/omelette/Object.h \
+  /home/shesahuman/stuff/omelette/World.h \
+  /home/shesahuman/stuff/omelette/imgui/imconfig.h \
+  /home/shesahuman/stuff/omelette/imgui/imgui.h \
+  /home/shesahuman/stuff/omelette/imgui/imgui_impl_glfw.h \
+  /home/shesahuman/stuff/omelette/imgui/imgui_impl_opengl3.h \
+  /home/shesahuman/stuff/omelette/editor/Editor.h \
   /home/shesahuman/stuff/omelette/glad/include/KHR/khrplatform.h \
   /home/shesahuman/stuff/omelette/glad/include/glad/glad.h \
   /home/shesahuman/stuff/omelette/omelette_style.h \
@@ -1028,8 +1056,10 @@ CMakeFiles/omelette.dir/Mesh.cpp.o: /home/shesahuman/stuff/omelette/Mesh.cpp \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
   /usr/include/bits/xopen_lim.h \
+  /usr/include/c++/15.1.1/algorithm \
   /usr/include/c++/15.1.1/backward/binders.h \
   /usr/include/c++/15.1.1/bit \
+  /usr/include/c++/15.1.1/bits/algorithmfwd.h \
   /usr/include/c++/15.1.1/bits/alloc_traits.h \
   /usr/include/c++/15.1.1/bits/allocator.h \
   /usr/include/c++/15.1.1/bits/basic_ios.h \
@@ -1075,20 +1105,24 @@ CMakeFiles/omelette.dir/Mesh.cpp.o: /home/shesahuman/stuff/omelette/Mesh.cpp \
   /usr/include/c++/15.1.1/bits/specfun.h \
   /usr/include/c++/15.1.1/bits/sstream.tcc \
   /usr/include/c++/15.1.1/bits/std_abs.h \
+  /usr/include/c++/15.1.1/bits/stl_algo.h \
   /usr/include/c++/15.1.1/bits/stl_algobase.h \
   /usr/include/c++/15.1.1/bits/stl_bvector.h \
   /usr/include/c++/15.1.1/bits/stl_construct.h \
   /usr/include/c++/15.1.1/bits/stl_function.h \
+  /usr/include/c++/15.1.1/bits/stl_heap.h \
   /usr/include/c++/15.1.1/bits/stl_iterator.h \
   /usr/include/c++/15.1.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15.1.1/bits/stl_iterator_base_types.h \
   /usr/include/c++/15.1.1/bits/stl_pair.h \
+  /usr/include/c++/15.1.1/bits/stl_tempbuf.h \
   /usr/include/c++/15.1.1/bits/stl_uninitialized.h \
   /usr/include/c++/15.1.1/bits/stl_vector.h \
   /usr/include/c++/15.1.1/bits/streambuf.tcc \
   /usr/include/c++/15.1.1/bits/streambuf_iterator.h \
   /usr/include/c++/15.1.1/bits/string_view.tcc \
   /usr/include/c++/15.1.1/bits/stringfwd.h \
+  /usr/include/c++/15.1.1/bits/uniform_int_dist.h \
   /usr/include/c++/15.1.1/bits/uses_allocator.h \
   /usr/include/c++/15.1.1/bits/uses_allocator_args.h \
   /usr/include/c++/15.1.1/bits/utility.h \
@@ -1126,6 +1160,8 @@ CMakeFiles/omelette.dir/Mesh.cpp.o: /home/shesahuman/stuff/omelette/Mesh.cpp \
   /usr/include/c++/15.1.1/limits \
   /usr/include/c++/15.1.1/new \
   /usr/include/c++/15.1.1/ostream \
+  /usr/include/c++/15.1.1/pstl/execution_defs.h \
+  /usr/include/c++/15.1.1/pstl/glue_algorithm_defs.h \
   /usr/include/c++/15.1.1/pstl/pstl_config.h \
   /usr/include/c++/15.1.1/sstream \
   /usr/include/c++/15.1.1/stdexcept \
@@ -2319,6 +2355,7 @@ CMakeFiles/omelette.dir/VBO.cpp.o: /home/shesahuman/stuff/omelette/VBO.cpp \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/syslimits.h
 
 CMakeFiles/omelette.dir/editor/Editor.cpp.o: /home/shesahuman/stuff/omelette/editor/Editor.cpp \
+  /home/shesahuman/stuff/omelette/AABB.h \
   /home/shesahuman/stuff/omelette/Camera.h \
   /home/shesahuman/stuff/omelette/EBO.h \
   /home/shesahuman/stuff/omelette/Mesh.h \
@@ -2427,8 +2464,10 @@ CMakeFiles/omelette.dir/editor/Editor.cpp.o: /home/shesahuman/stuff/omelette/edi
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
   /usr/include/bits/xopen_lim.h \
+  /usr/include/c++/15.1.1/algorithm \
   /usr/include/c++/15.1.1/backward/binders.h \
   /usr/include/c++/15.1.1/bit \
+  /usr/include/c++/15.1.1/bits/algorithmfwd.h \
   /usr/include/c++/15.1.1/bits/alloc_traits.h \
   /usr/include/c++/15.1.1/bits/allocator.h \
   /usr/include/c++/15.1.1/bits/basic_ios.h \
@@ -2474,20 +2513,24 @@ CMakeFiles/omelette.dir/editor/Editor.cpp.o: /home/shesahuman/stuff/omelette/edi
   /usr/include/c++/15.1.1/bits/specfun.h \
   /usr/include/c++/15.1.1/bits/sstream.tcc \
   /usr/include/c++/15.1.1/bits/std_abs.h \
+  /usr/include/c++/15.1.1/bits/stl_algo.h \
   /usr/include/c++/15.1.1/bits/stl_algobase.h \
   /usr/include/c++/15.1.1/bits/stl_bvector.h \
   /usr/include/c++/15.1.1/bits/stl_construct.h \
   /usr/include/c++/15.1.1/bits/stl_function.h \
+  /usr/include/c++/15.1.1/bits/stl_heap.h \
   /usr/include/c++/15.1.1/bits/stl_iterator.h \
   /usr/include/c++/15.1.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15.1.1/bits/stl_iterator_base_types.h \
   /usr/include/c++/15.1.1/bits/stl_pair.h \
+  /usr/include/c++/15.1.1/bits/stl_tempbuf.h \
   /usr/include/c++/15.1.1/bits/stl_uninitialized.h \
   /usr/include/c++/15.1.1/bits/stl_vector.h \
   /usr/include/c++/15.1.1/bits/streambuf.tcc \
   /usr/include/c++/15.1.1/bits/streambuf_iterator.h \
   /usr/include/c++/15.1.1/bits/string_view.tcc \
   /usr/include/c++/15.1.1/bits/stringfwd.h \
+  /usr/include/c++/15.1.1/bits/uniform_int_dist.h \
   /usr/include/c++/15.1.1/bits/uses_allocator.h \
   /usr/include/c++/15.1.1/bits/uses_allocator_args.h \
   /usr/include/c++/15.1.1/bits/utility.h \
@@ -2525,6 +2568,8 @@ CMakeFiles/omelette.dir/editor/Editor.cpp.o: /home/shesahuman/stuff/omelette/edi
   /usr/include/c++/15.1.1/limits \
   /usr/include/c++/15.1.1/new \
   /usr/include/c++/15.1.1/ostream \
+  /usr/include/c++/15.1.1/pstl/execution_defs.h \
+  /usr/include/c++/15.1.1/pstl/glue_algorithm_defs.h \
   /usr/include/c++/15.1.1/pstl/pstl_config.h \
   /usr/include/c++/15.1.1/sstream \
   /usr/include/c++/15.1.1/stdexcept \
@@ -4171,20 +4216,24 @@ CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o: /home/shesahuman/stuff/omelet
 
 CMakeFiles/omelette.dir/main.cpp.o: /home/shesahuman/stuff/omelette/main.cpp \
   /home/shesahuman/stuff/omelette/Camera.h \
+  /home/shesahuman/stuff/omelette/Mesh.h \
+  /home/shesahuman/stuff/omelette/VBO.h \
+  /home/shesahuman/stuff/omelette/AABB.h \
   /home/shesahuman/stuff/omelette/EBO.h \
   /home/shesahuman/stuff/omelette/Mesh.h \
   /home/shesahuman/stuff/omelette/Object.h \
   /home/shesahuman/stuff/omelette/VAO.h \
   /home/shesahuman/stuff/omelette/VBO.h \
   /home/shesahuman/stuff/omelette/World.h \
-  /home/shesahuman/stuff/omelette/editor/Editor.h \
-  /home/shesahuman/stuff/omelette/glad/include/KHR/khrplatform.h \
-  /home/shesahuman/stuff/omelette/glad/include/glad/glad.h \
   /home/shesahuman/stuff/omelette/imgui/imconfig.h \
   /home/shesahuman/stuff/omelette/imgui/imgui.h \
   /home/shesahuman/stuff/omelette/imgui/imgui_impl_glfw.h \
   /home/shesahuman/stuff/omelette/imgui/imgui_impl_opengl3.h \
   /home/shesahuman/stuff/omelette/omelette_style.h \
+  /home/shesahuman/stuff/omelette/editor/Editor.h \
+  /home/shesahuman/stuff/omelette/glad/include/KHR/khrplatform.h \
+  /home/shesahuman/stuff/omelette/glad/include/glad/glad.h \
+  /home/shesahuman/stuff/omelette/primitive_generator.h \
   /home/shesahuman/stuff/omelette/print_helper.h \
   /home/shesahuman/stuff/omelette/shaderClass.h \
   /usr/include/GLFW/glfw3.h \
@@ -4277,8 +4326,10 @@ CMakeFiles/omelette.dir/main.cpp.o: /home/shesahuman/stuff/omelette/main.cpp \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
   /usr/include/bits/xopen_lim.h \
+  /usr/include/c++/15.1.1/algorithm \
   /usr/include/c++/15.1.1/backward/binders.h \
   /usr/include/c++/15.1.1/bit \
+  /usr/include/c++/15.1.1/bits/algorithmfwd.h \
   /usr/include/c++/15.1.1/bits/alloc_traits.h \
   /usr/include/c++/15.1.1/bits/allocator.h \
   /usr/include/c++/15.1.1/bits/basic_ios.h \
@@ -4324,20 +4375,24 @@ CMakeFiles/omelette.dir/main.cpp.o: /home/shesahuman/stuff/omelette/main.cpp \
   /usr/include/c++/15.1.1/bits/specfun.h \
   /usr/include/c++/15.1.1/bits/sstream.tcc \
   /usr/include/c++/15.1.1/bits/std_abs.h \
+  /usr/include/c++/15.1.1/bits/stl_algo.h \
   /usr/include/c++/15.1.1/bits/stl_algobase.h \
   /usr/include/c++/15.1.1/bits/stl_bvector.h \
   /usr/include/c++/15.1.1/bits/stl_construct.h \
   /usr/include/c++/15.1.1/bits/stl_function.h \
+  /usr/include/c++/15.1.1/bits/stl_heap.h \
   /usr/include/c++/15.1.1/bits/stl_iterator.h \
   /usr/include/c++/15.1.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15.1.1/bits/stl_iterator_base_types.h \
   /usr/include/c++/15.1.1/bits/stl_pair.h \
+  /usr/include/c++/15.1.1/bits/stl_tempbuf.h \
   /usr/include/c++/15.1.1/bits/stl_uninitialized.h \
   /usr/include/c++/15.1.1/bits/stl_vector.h \
   /usr/include/c++/15.1.1/bits/streambuf.tcc \
   /usr/include/c++/15.1.1/bits/streambuf_iterator.h \
   /usr/include/c++/15.1.1/bits/string_view.tcc \
   /usr/include/c++/15.1.1/bits/stringfwd.h \
+  /usr/include/c++/15.1.1/bits/uniform_int_dist.h \
   /usr/include/c++/15.1.1/bits/uses_allocator.h \
   /usr/include/c++/15.1.1/bits/uses_allocator_args.h \
   /usr/include/c++/15.1.1/bits/utility.h \
@@ -4375,6 +4430,8 @@ CMakeFiles/omelette.dir/main.cpp.o: /home/shesahuman/stuff/omelette/main.cpp \
   /usr/include/c++/15.1.1/limits \
   /usr/include/c++/15.1.1/new \
   /usr/include/c++/15.1.1/ostream \
+  /usr/include/c++/15.1.1/pstl/execution_defs.h \
+  /usr/include/c++/15.1.1/pstl/glue_algorithm_defs.h \
   /usr/include/c++/15.1.1/pstl/pstl_config.h \
   /usr/include/c++/15.1.1/sstream \
   /usr/include/c++/15.1.1/stdexcept \
@@ -4647,7 +4704,6 @@ CMakeFiles/omelette.dir/main.cpp.o: /home/shesahuman/stuff/omelette/main.cpp \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/syslimits.h
 
 CMakeFiles/omelette.dir/primitive_generator.cpp.o: /home/shesahuman/stuff/omelette/primitive_generator.cpp \
-  /home/shesahuman/stuff/omelette/Camera.h \
   /home/shesahuman/stuff/omelette/EBO.h \
   /home/shesahuman/stuff/omelette/Mesh.h \
   /home/shesahuman/stuff/omelette/VAO.h \
@@ -4657,8 +4713,6 @@ CMakeFiles/omelette.dir/primitive_generator.cpp.o: /home/shesahuman/stuff/omelet
   /home/shesahuman/stuff/omelette/omelette_style.h \
   /home/shesahuman/stuff/omelette/primitive_generator.h \
   /home/shesahuman/stuff/omelette/print_helper.h \
-  /home/shesahuman/stuff/omelette/shaderClass.h \
-  /usr/include/GLFW/glfw3.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -5743,8 +5797,6 @@ CMakeFiles/omelette.dir/Camera.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/mmintrin.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/mm_malloc.h:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/lzcntintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/ia32intrin.h:
@@ -5825,51 +5877,21 @@ CMakeFiles/omelette.dir/Camera.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2minmaxintrin.h:
 
-/usr/include/glm/detail/type_mat2x2.inl:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/cmpccxaddintrin.h:
 
-/usr/lib/crti.o:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2mediaintrin.h:
 
-/usr/include/bits/signum-arch.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2copyintrin.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/fxsrintrin.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2convertintrin.h:
 
-/usr/include/glm/detail/type_mat2x2.hpp:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2-512minmaxintrin.h:
 
-/usr/include/bits/types.h:
-
-/usr/include/glm/vector_relational.hpp:
-
-/usr/include/glm/detail/qualifier.hpp:
-
-/usr/include/glm/gtc/matrix_transform.inl:
-
-/usr/include/glm/detail/func_vector_relational.inl:
-
-/usr/include/glm/detail/func_packing.inl:
-
-/usr/include/glm/detail/func_matrix.inl:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/waitpkgintrin.h:
-
-/usr/include/glm/detail/func_integer.inl:
-
-/usr/include/glm/detail/func_geometric.inl:
-
-/usr/include/sched.h:
-
-/usr/include/wctype.h:
-
-/usr/include/glm/detail/compute_common.hpp:
-
-/usr/include/strings.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2-512bf16intrin.h:
 
 /usr/include/errno.h:
 
 /usr/include/bits/getopt_posix.h:
-
-/usr/include/stdint.h:
-
-/home/shesahuman/stuff/omelette/Mesh.h:
 
 CMakeFiles/omelette.dir/main.cpp.o:
 
@@ -5891,11 +5913,9 @@ CMakeFiles/omelette.dir/main.cpp.o:
 
 /usr/include/glm/ext/vector_bool3_precision.hpp:
 
+/usr/include/glm/detail/func_packing.inl:
+
 /usr/include/c++/15.1.1/tr1/special_function_util.h:
-
-/usr/lib/libgcc_s.so:
-
-/usr/include/glm/detail/type_half.hpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx512bitalgintrin.h:
 
@@ -5909,19 +5929,23 @@ CMakeFiles/omelette.dir/main.cpp.o:
 
 /usr/include/bits/mathcalls-narrow.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2convertintrin.h:
-
 /usr/include/c++/15.1.1/tr1/beta_function.tcc:
 
 /usr/include/bits/types/__fpos_t.h:
 
 /usr/include/bits/types/sig_atomic_t.h:
 
+/usr/include/c++/15.1.1/bits/exception_defines.h:
+
 /usr/include/c++/15.1.1/tr1/modified_bessel_func.tcc:
 
 /usr/include/glm/detail/type_half.inl:
 
-/usr/include/c++/15.1.1/bits/exception_defines.h:
+/usr/lib/libgcc_s.so:
+
+/usr/include/glm/detail/type_half.hpp:
+
+/usr/include/c++/15.1.1/pstl/execution_defs.h:
 
 CMakeFiles/omelette.dir/shaderClass.cpp.o:
 
@@ -5931,23 +5955,9 @@ CMakeFiles/omelette.dir/shaderClass.cpp.o:
 
 /usr/include/c++/15.1.1/initializer_list:
 
-/usr/lib32/libxcb.so.1:
-
-/usr/include/c++/15.1.1/fstream:
-
-CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o:
-
-/usr/include/c++/15.1.1/ext/string_conversions.h:
-
-/home/shesahuman/stuff/omelette/shaderClass.cpp:
-
-/usr/include/bits/confname.h:
-
 /usr/include/c++/15.1.1/ext/alloc_traits.h:
 
 /usr/include/c++/15.1.1/cstring:
-
-/usr/include/bits/types/sigval_t.h:
 
 /home/shesahuman/stuff/omelette/imgui/imgui_impl_opengl3.cpp:
 
@@ -5962,10 +5972,6 @@ CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o:
 /usr/include/c++/15.1.1/bits/stl_pair.h:
 
 /usr/include/bits/pthreadtypes-arch.h:
-
-/home/shesahuman/stuff/omelette/imgui/imgui_internal.h:
-
-/usr/include/glm/gtx/rotate_vector.hpp:
 
 /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
 
@@ -5993,11 +5999,9 @@ CMakeFiles/omelette.dir/EBO.cpp.o:
 
 /usr/include/bits/types/__mbstate_t.h:
 
-/usr/include/glm/detail/_fixes.hpp:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/mm_malloc.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/cmpccxaddintrin.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2mediaintrin.h:
+/usr/include/c++/15.1.1/bits/uniform_int_dist.h:
 
 /usr/include/asm-generic/bitsperlong.h:
 
@@ -6053,29 +6057,19 @@ CMakeFiles/omelette.dir/EBO.cpp.o:
 
 /usr/include/c++/15.1.1/bits/new_allocator.h:
 
-/usr/include/bits/types/__FILE.h:
+/usr/include/c++/15.1.1/bits/locale_facets.tcc:
 
-/usr/include/features.h:
+/usr/include/c++/15.1.1/bits/invoke.h:
 
-/usr/include/glm/ext/matrix_double2x3_precision.hpp:
+/usr/include/c++/15.1.1/bits/streambuf.tcc:
 
-/usr/include/c++/15.1.1/ext/numeric_traits.h:
+/usr/include/c++/15.1.1/bits/locale_facets.h:
 
-/usr/include/glm/detail/setup.hpp:
+/usr/include/c++/15.1.1/bits/istream.tcc:
 
-/usr/include/bits/types/struct_timeval.h:
+/usr/include/bits/local_lim.h:
 
-/usr/include/c++/15.1.1/bits/locale_classes.h:
-
-/usr/include/bits/types/clockid_t.h:
-
-/usr/include/bits/setjmp.h:
-
-/usr/include/glm/detail/type_mat3x4.inl:
-
-/usr/include/linux/close_range.h:
-
-/usr/include/glm/gtx/component_wise.inl:
+/usr/include/c++/15.1.1/bits/functexcept.h:
 
 /usr/include/c++/15.1.1/cfloat:
 
@@ -6085,37 +6079,11 @@ CMakeFiles/omelette.dir/EBO.cpp.o:
 
 /usr/include/c++/15.1.1/bits/ios_base.h:
 
-/usr/include/c++/15.1.1/cwchar:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/bmi2intrin.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/f16cintrin.h:
-
-/usr/include/bits/select.h:
-
-CMakeFiles/omelette.dir/primitive_generator.cpp.o:
-
-/usr/include/c++/15.1.1/system_error:
-
-/usr/include/asm/errno.h:
-
-/usr/include/bits/types/cookie_io_functions_t.h:
+/usr/include/c++/15.1.1/bits/fstream.tcc:
 
 /usr/include/c++/15.1.1/bits/exception_ptr.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/adxintrin.h:
-
-/usr/include/c++/15.1.1/ext/atomicity.h:
-
-/usr/include/c++/15.1.1/bits/stl_vector.h:
-
-/usr/lib/libdl.a:
-
-/usr/include/c++/15.1.1/cwctype:
-
-/usr/include/asm-generic/int-ll64.h:
-
-CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o:
-
-/usr/include/bits/pthreadtypes.h:
 
 /usr/include/c++/15.1.1/bits/stl_function.h:
 
@@ -6129,13 +6097,13 @@ CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o:
 
 /usr/include/c++/15.1.1/tr1/ell_integral.tcc:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2copyintrin.h:
+/usr/include/sched.h:
 
-/usr/include/bits/libc-header-start.h:
+/usr/include/wctype.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/vpclmulqdqintrin.h:
+/usr/include/glm/gtx/rotate_vector.hpp:
 
-/usr/include/glm/ext/vector_uint3.hpp:
+/home/shesahuman/stuff/omelette/imgui/imgui_internal.h:
 
 /usr/include/c++/15.1.1/string_view:
 
@@ -6147,21 +6115,29 @@ CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o:
 
 /usr/include/bits/long-double.h:
 
-/usr/include/bits/uio_lim.h:
+/usr/include/c++/15.1.1/bits/locale_classes.h:
 
-/home/shesahuman/stuff/omelette/shaderClass.h:
+/usr/include/glm/detail/setup.hpp:
 
-/usr/include/c++/15.1.1/type_traits:
+/usr/include/bits/types/struct_timeval.h:
 
-/usr/include/bits/stdint-least.h:
+/usr/include/bits/floatn.h:
 
-/usr/include/glm/ext/vector_bool4_precision.hpp:
+/usr/include/features.h:
+
+/usr/include/glm/ext/matrix_double2x3_precision.hpp:
+
+/usr/include/c++/15.1.1/ext/numeric_traits.h:
+
+/usr/include/bits/types/__FILE.h:
+
+/usr/include/bits/endianness.h:
 
 /usr/lib/libc.so.6:
 
-/usr/include/bits/fp-fast.h:
-
 /usr/include/c++/15.1.1/bits/streambuf_iterator.h:
+
+/usr/include/bits/fp-fast.h:
 
 /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++io.h:
 
@@ -6177,105 +6153,97 @@ CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o:
 
 /usr/include/glm/ext/quaternion_double.hpp:
 
-/usr/include/glm/gtx/quaternion.hpp:
-
-/usr/include/bits/floatn.h:
-
-/home/shesahuman/stuff/omelette/Camera.h:
-
-/usr/include/glm/vec3.hpp:
-
-/usr/include/bits/types/stack_t.h:
-
-/usr/include/c++/15.1.1/bits/postypes.h:
-
-/usr/include/bits/types/timer_t.h:
-
-/usr/include/c++/15.1.1/bits/stl_iterator_base_funcs.h:
-
-/usr/include/bits/floatn-common.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2bf16intrin.h:
-
-/usr/include/bits/stdint-uintn.h:
-
-/usr/include/c++/15.1.1/bits/locale_classes.tcc:
-
-/usr/include/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/glm/ext/matrix_float3x4.hpp:
-
-/usr/include/bits/mathcalls-helper-functions.h:
-
-/usr/include/glm/detail/type_mat4x3.inl:
-
-/usr/include/glm/gtx/transform.inl:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2-512bf16intrin.h:
-
-/usr/include/bits/types/time_t.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/prfchiintrin.h:
-
-/usr/include/bits/types/FILE.h:
-
-/usr/include/glm/detail/type_mat2x3.hpp:
-
-/usr/include/linux/posix_types.h:
+/usr/include/bits/cpu-set.h:
 
 /usr/include/bits/byteswap.h:
 
-/usr/include/gnu/stubs-64.h:
+/usr/include/bits/locale.h:
 
-/usr/include/glm/ext/vector_bool1_precision.hpp:
+/usr/include/c++/15.1.1/tr1/legendre_function.tcc:
 
-/home/shesahuman/stuff/omelette/omelette_style.h:
+/usr/include/c++/15.1.1/concepts:
 
-/usr/include/bits/struct_mutex.h:
-
-/usr/include/bits/cpu-set.h:
-
-/usr/include/glm/detail/_vectorize.hpp:
-
-/usr/include/bits/dlfcn.h:
-
-/usr/include/bits/timesize.h:
-
-/usr/include/c++/15.1.1/debug/assertions.h:
-
-/usr/include/glm/ext/vector_int3_sized.hpp:
-
-/usr/include/c++/15.1.1/bits/move.h:
+/usr/include/bits/types/time_t.h:
 
 /usr/include/c++/15.1.1/bits/localefwd.h:
-
-/usr/include/signal.h:
-
-/usr/include/bits/atomic_wide_counter.h:
 
 /usr/include/glm/gtc/type_ptr.hpp:
 
 /usr/include/c++/15.1.1/bits/alloc_traits.h:
 
+/usr/include/c++/15.1.1/bits/stl_heap.h:
+
+/usr/include/glm/ext/matrix_double4x2.hpp:
+
+/usr/include/glm/common.hpp:
+
+/usr/include/glm/gtc/type_ptr.inl:
+
+/usr/include/c++/15.1.1/bits/move.h:
+
+/usr/include/bits/types/clockid_t.h:
+
 /usr/include/c++/15.1.1/bits/codecvt.h:
 
 /usr/include/bits/timex.h:
 
-/usr/include/c++/15.1.1/bits/stl_uninitialized.h:
+/usr/lib32/libxcb.so.1:
 
-/usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/error_constants.h:
+/usr/include/c++/15.1.1/fstream:
 
-/usr/include/glm/gtc/constants.hpp:
+/usr/include/bits/types/__locale_t.h:
 
-/usr/include/asm-generic/posix_types.h:
+/usr/include/c++/15.1.1/debug/assertions.h:
+
+/usr/include/glm/ext/vector_int3_sized.hpp:
+
+/home/shesahuman/stuff/omelette/VAO.h:
+
+/usr/include/c++/15.1.1/bits/stl_iterator_base_funcs.h:
+
+/usr/include/bits/floatn-common.h:
+
+/home/shesahuman/stuff/omelette/Object.h:
+
+/home/shesahuman/stuff/omelette/primitive_generator.cpp:
+
+/usr/include/bits/uintn-identity.h:
+
+/usr/include/glm/ext/vector_double2_precision.hpp:
+
+/usr/include/c++/15.1.1/bits/basic_ios.h:
+
+/usr/include/glm/ext/quaternion_float.hpp:
+
+/usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/basic_file.h:
+
+/usr/include/glm/mat4x4.hpp:
+
+/home/shesahuman/stuff/omelette/EBO.h:
+
+/usr/include/bits/stdlib-float.h:
+
+/usr/include/glm/ext/quaternion_relational.inl:
 
 /usr/include/c++/15.1.1/cerrno:
 
-/usr/include/bits/types/__sigset_t.h:
+/usr/include/asm-generic/posix_types.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/limits.h:
+/usr/include/c++/15.1.1/bits/allocator.h:
 
-/usr/include/asm-generic/errno-base.h:
+/usr/include/bits/wordsize.h:
+
+/usr/include/stdio.h:
+
+/home/shesahuman/stuff/omelette/Camera.h:
+
+/usr/include/glm/vec3.hpp:
+
+/usr/include/c++/15.1.1/pstl/glue_algorithm_defs.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/glm/gtx/quaternion.hpp:
 
 /usr/include/asm/posix_types.h:
 
@@ -6285,23 +6253,29 @@ CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o:
 
 /usr/include/c++/15.1.1/bits/concept_check.h:
 
-/usr/include/c++/15.1.1/cstdlib:
+/usr/include/glm/ext/matrix_double2x4.hpp:
 
-/usr/include/bits/mathcalls-macros.h:
+/usr/include/bits/math-vector.h:
 
-/usr/include/bits/endianness.h:
+/usr/include/bits/uio_lim.h:
 
-/usr/include/bits/locale.h:
+/home/shesahuman/stuff/omelette/shaderClass.h:
 
-/usr/include/c++/15.1.1/tr1/legendre_function.tcc:
+/usr/include/bits/timesize.h:
 
-/usr/include/c++/15.1.1/concepts:
+/usr/include/glm/ext/matrix_float3x4.hpp:
 
-/usr/include/bits/local_lim.h:
+/usr/include/bits/types/struct___jmp_buf_tag.h:
 
-/usr/include/c++/15.1.1/bits/functexcept.h:
+/usr/include/glm/detail/type_mat3x4.inl:
 
-/usr/include/c++/15.1.1/bits/istream.tcc:
+/home/shesahuman/stuff/omelette/Mesh.h:
+
+/usr/include/stdint.h:
+
+/home/shesahuman/stuff/omelette/World.h:
+
+/home/shesahuman/stuff/omelette/glad/src/glad.c:
 
 /usr/include/c++/15.1.1/tr1/poly_laguerre.tcc:
 
@@ -6309,27 +6283,119 @@ CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o:
 
 /usr/include/c++/15.1.1/pstl/pstl_config.h:
 
-/usr/include/c++/15.1.1/bits/streambuf.tcc:
+/usr/include/bits/libc-header-start.h:
 
-/usr/include/c++/15.1.1/bits/locale_facets.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/vpclmulqdqintrin.h:
 
-/usr/include/bits/thread-shared-types.h:
+/usr/include/glm/ext/vector_uint3.hpp:
 
-/usr/include/c++/15.1.1/bits/memoryfwd.h:
+/home/shesahuman/stuff/omelette/imgui/imgui_impl_glfw.h:
 
-/usr/include/bits/stdlib-float.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2-512satcvtintrin.h:
 
-/home/shesahuman/stuff/omelette/EBO.h:
+/home/shesahuman/stuff/omelette/imgui/imgui.h:
 
-/usr/include/bits/time64.h:
+/usr/include/glm/ext/vector_int2_sized.hpp:
 
-/usr/include/c++/15.1.1/limits:
+/usr/include/c++/15.1.1/tr1/riemann_zeta.tcc:
 
-/usr/include/glm/ext/matrix_clip_space.inl:
+/usr/include/glm/ext/vector_double2.hpp:
 
-/usr/include/c++/15.1.1/bits/hash_bytes.h:
+/usr/include/bits/types/stack_t.h:
 
-/usr/include/glm/detail/type_vec3.inl:
+/usr/include/c++/15.1.1/bits/postypes.h:
+
+/usr/include/bits/types/timer_t.h:
+
+/usr/include/bits/mathcalls-helper-functions.h:
+
+/usr/include/glm/detail/type_mat4x3.inl:
+
+/usr/include/glm/gtx/transform.inl:
+
+/usr/lib/libdl.a:
+
+/usr/include/c++/15.1.1/cwctype:
+
+/usr/include/asm-generic/int-ll64.h:
+
+/usr/include/c++/15.1.1/bits/stl_vector.h:
+
+/home/shesahuman/stuff/omelette/VBO.h:
+
+/usr/include/glm/detail/func_exponential.inl:
+
+/usr/include/c++/15.1.1/clocale:
+
+/usr/include/c++/15.1.1/string:
+
+/usr/include/glm/detail/type_mat4x2.hpp:
+
+/usr/include/glm/detail/type_mat4x2.inl:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/prfchiintrin.h:
+
+/usr/include/bits/types/FILE.h:
+
+/usr/include/glm/ext/vector_bool4_precision.hpp:
+
+/usr/include/c++/15.1.1/cstdlib:
+
+/usr/include/bits/mathcalls-macros.h:
+
+/usr/include/c++/15.1.1/bits/stl_uninitialized.h:
+
+/usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/error_constants.h:
+
+/usr/include/glm/gtc/constants.hpp:
+
+/home/shesahuman/stuff/omelette/print_helper.h:
+
+/usr/include/c++/15.1.1/cmath:
+
+/usr/include/glm/ext/vector_double4_precision.hpp:
+
+/usr/include/bits/types/__sigset_t.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/limits.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/home/shesahuman/stuff/omelette/editor/Editor.h:
+
+/usr/include/glm/packing.hpp:
+
+CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/home/shesahuman/stuff/omelette/omelette_style.h:
+
+/usr/include/glm/ext/vector_bool1_precision.hpp:
+
+CMakeFiles/omelette.dir/primitive_generator.cpp.o:
+
+/usr/include/c++/15.1.1/system_error:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2bf16intrin.h:
+
+/usr/include/c++/15.1.1/bits/locale_classes.tcc:
+
+/usr/include/bits/stdint-uintn.h:
+
+/usr/include/asm/errno.h:
+
+/usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/c++/15.1.1/cwchar:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/f16cintrin.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/setjmp.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/xsaveoptintrin.h:
 
@@ -6341,23 +6407,51 @@ CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o:
 
 /usr/include/linux/sched/types.h:
 
+/usr/include/c++/15.1.1/type_traits:
+
+/usr/include/bits/stdint-least.h:
+
+/usr/include/bits/struct_mutex.h:
+
+/usr/include/bits/thread-shared-types.h:
+
+/usr/include/c++/15.1.1/bits/memoryfwd.h:
+
+/usr/include/bits/time64.h:
+
+/usr/include/c++/15.1.1/bits/algorithmfwd.h:
+
+/usr/include/bits/sigaction.h:
+
+/usr/include/c++/15.1.1/limits:
+
+/usr/include/glm/ext/matrix_clip_space.inl:
+
+/usr/include/c++/15.1.1/bits/hash_bytes.h:
+
+/usr/include/glm/detail/type_vec3.inl:
+
+/usr/include/bits/types.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/fxsrintrin.h:
+
+/usr/include/glm/detail/type_mat2x2.hpp:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avxifmaintrin.h:
 
 /usr/include/c++/15.1.1/new:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/syslimits.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2-512mediaintrin.h:
+
+/usr/include/c++/15.1.1/bits/ostream_insert.h:
+
 /usr/include/bits/types/__fpos64_t.h:
 
 /usr/include/c++/15.1.1/bits/uses_allocator_args.h:
 
 /usr/include/glm/ext/matrix_double3x2_precision.hpp:
-
-/usr/include/bits/types/__locale_t.h:
-
-/home/shesahuman/stuff/omelette/glad/src/glad.c:
-
-/home/shesahuman/stuff/omelette/World.h:
 
 /usr/include/c++/15.1.1/debug/debug.h:
 
@@ -6381,6 +6475,8 @@ CMakeFiles/omelette.dir/imgui/imgui_demo.cpp.o:
 
 /usr/include/bits/signal_ext.h:
 
+/home/shesahuman/stuff/omelette/AABB.h:
+
 /usr/include/bits/types/sigset_t.h:
 
 CMakeFiles/omelette.dir/Mesh.cpp.o:
@@ -6390,6 +6486,8 @@ CMakeFiles/omelette.dir/Mesh.cpp.o:
 CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o:
 
 /usr/include/c++/15.1.1/bits/memory_resource.h:
+
+/usr/include/c++/15.1.1/bits/stl_algo.h:
 
 /usr/include/c++/15.1.1/exception:
 
@@ -6409,19 +6507,15 @@ CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o:
 
 /usr/include/bits/waitflags.h:
 
-/usr/include/glm/ext/quaternion_relational.inl:
-
-/usr/include/c++/15.1.1/bits/allocator.h:
-
-/usr/include/bits/wordsize.h:
-
-/usr/include/stdio.h:
-
 /usr/include/c++/15.1.1/streambuf:
 
 /usr/include/bits/types/struct_tm.h:
 
 /usr/include/glm/detail/type_vec1.hpp:
+
+/usr/include/locale.h:
+
+/home/shesahuman/stuff/omelette/imgui/imgui_impl_opengl3.h:
 
 /usr/include/bits/types/wint_t.h:
 
@@ -6431,33 +6525,15 @@ CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o:
 
 /usr/include/bits/xopen_lim.h:
 
+CMakeFiles/omelette.dir/imgui/imgui_widgets.cpp.o:
+
+/usr/include/c++/15.1.1/ext/string_conversions.h:
+
+/home/shesahuman/stuff/omelette/shaderClass.cpp:
+
+/usr/include/bits/confname.h:
+
 /usr/include/c++/15.1.1/backward/binders.h:
-
-/usr/include/c++/15.1.1/bits/stringfwd.h:
-
-/usr/include/glm/detail/func_common.inl:
-
-/usr/include/c++/15.1.1/tr1/riemann_zeta.tcc:
-
-/usr/include/glm/ext/vector_double2.hpp:
-
-/usr/include/c++/15.1.1/bits/invoke.h:
-
-/usr/include/c++/15.1.1/bits/locale_facets.tcc:
-
-/home/shesahuman/stuff/omelette/primitive_generator.cpp:
-
-/usr/include/bits/uintn-identity.h:
-
-/usr/include/glm/ext/vector_double2_precision.hpp:
-
-/usr/include/c++/15.1.1/bits/basic_ios.h:
-
-/usr/include/glm/ext/quaternion_float.hpp:
-
-/usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/basic_file.h:
-
-/usr/include/glm/mat4x4.hpp:
 
 /usr/include/c++/15.1.1/bits/basic_ios.tcc:
 
@@ -6467,13 +6543,19 @@ CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o:
 
 /usr/include/limits.h:
 
+/usr/include/glm/detail/type_mat2x2.inl:
+
+/usr/lib/crti.o:
+
+/usr/include/bits/signum-arch.h:
+
+/usr/include/c++/15.1.1/ext/atomicity.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/adxintrin.h:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/keylockerintrin.h:
 
 /usr/include/c++/15.1.1/bits/charconv.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/bmi2intrin.h:
-
-/usr/include/c++/15.1.1/bits/fstream.tcc:
 
 /usr/include/c++/15.1.1/tuple:
 
@@ -6481,7 +6563,53 @@ CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o:
 
 /usr/include/bits/posix2_lim.h:
 
+/usr/include/c++/15.1.1/bits/stl_tempbuf.h:
+
 /usr/include/glm/ext/matrix_float2x3_precision.hpp:
+
+/usr/include/glm/detail/_fixes.hpp:
+
+/usr/include/bits/dlfcn.h:
+
+/usr/include/glm/detail/_vectorize.hpp:
+
+/usr/include/bits/types/sigval_t.h:
+
+/usr/include/glm/detail/compute_common.hpp:
+
+/usr/include/strings.h:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+/usr/include/signal.h:
+
+/usr/include/c++/15.1.1/bits/stringfwd.h:
+
+/usr/include/glm/detail/func_common.inl:
+
+/usr/include/glm/detail/func_geometric.inl:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/waitpkgintrin.h:
+
+/usr/include/glm/detail/func_integer.inl:
+
+/usr/include/glm/detail/func_matrix.inl:
+
+/usr/include/glm/detail/func_vector_relational.inl:
+
+/usr/include/glm/gtx/component_wise.inl:
+
+/usr/include/linux/close_range.h:
+
+/usr/include/glm/detail/qualifier.hpp:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/glm/detail/type_mat2x3.hpp:
+
+/usr/include/glm/gtc/matrix_transform.inl:
+
+/usr/include/glm/vector_relational.hpp:
 
 /usr/include/glm/detail/type_mat2x3.inl:
 
@@ -6505,18 +6633,6 @@ CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o:
 
 /usr/include/glm/detail/type_mat3x4.hpp:
 
-/usr/include/glm/detail/func_exponential.inl:
-
-/usr/include/c++/15.1.1/string:
-
-/usr/include/c++/15.1.1/clocale:
-
-/usr/include/glm/detail/type_mat4x2.hpp:
-
-/usr/include/glm/detail/type_mat4x2.inl:
-
-/home/shesahuman/stuff/omelette/VBO.h:
-
 /usr/include/glm/detail/type_mat4x3.hpp:
 
 /usr/include/glm/detail/type_mat4x4.inl:
@@ -6529,10 +6645,6 @@ CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o:
 
 /usr/include/glm/detail/type_vec2.inl:
 
-/usr/include/c++/15.1.1/bits/ostream_insert.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2-512mediaintrin.h:
-
 /usr/include/c++/15.1.1/sstream:
 
 /usr/include/glm/detail/type_vec3.hpp:
@@ -6540,10 +6652,6 @@ CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o:
 /usr/include/glm/ext/matrix_clip_space.hpp:
 
 /usr/include/glm/ext/matrix_double2x2.hpp:
-
-/usr/include/bits/math-vector.h:
-
-/usr/include/glm/ext/matrix_double2x4.hpp:
 
 /usr/include/features-time64.h:
 
@@ -6580,12 +6688,6 @@ CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o:
 /usr/include/bits/getopt_core.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/amxavx512intrin.h:
-
-/usr/include/glm/ext/matrix_double4x2.hpp:
-
-/usr/include/glm/common.hpp:
-
-/usr/include/glm/gtc/type_ptr.inl:
 
 /home/shesahuman/stuff/omelette/imgui/imgui_impl_glfw.cpp:
 
@@ -6753,12 +6855,6 @@ CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o:
 
 /usr/include/glm/ext/vector_int3.hpp:
 
-/usr/include/c++/15.1.1/cmath:
-
-/usr/include/glm/ext/vector_double4_precision.hpp:
-
-/home/shesahuman/stuff/omelette/print_helper.h:
-
 /usr/include/glm/ext/vector_float2.hpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/movdirintrin.h:
@@ -6774,6 +6870,8 @@ CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o:
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/amxtileintrin.h:
 
 /usr/include/glm/ext/vector_float3.hpp:
+
+/usr/include/c++/15.1.1/algorithm:
 
 /usr/include/c++/15.1.1/math.h:
 
@@ -6796,8 +6894,6 @@ CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o:
 /usr/include/glm/ext/vector_int4_sized.hpp:
 
 /usr/include/glm/ext/vector_relational.inl:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2-512minmaxintrin.h:
 
 /usr/include/glm/ext/vector_uint1.hpp:
 
@@ -6891,15 +6987,9 @@ CMakeFiles/omelette.dir/imgui/imgui_tables.cpp.o:
 
 /usr/include/glm/mat4x3.hpp:
 
-/usr/include/glm/packing.hpp:
-
-/home/shesahuman/stuff/omelette/editor/Editor.h:
-
 /usr/include/glm/trigonometric.hpp:
 
 /usr/include/glm/vec2.hpp:
-
-/usr/include/gnu/stubs.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/tsxldtrkintrin.h:
 
@@ -6943,8 +7033,6 @@ CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o:
 
 /home/shesahuman/stuff/omelette/EBO.cpp:
 
-/home/shesahuman/stuff/omelette/VAO.h:
-
 /usr/include/glm/ext/vector_int1.hpp:
 
 /home/shesahuman/stuff/omelette/VBO.cpp:
@@ -6959,19 +7047,9 @@ CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o:
 
 /usr/include/bits/unistd_ext.h:
 
-/home/shesahuman/stuff/omelette/Object.h:
-
-/home/shesahuman/stuff/omelette/imgui/imgui_impl_glfw.h:
-
-/usr/include/locale.h:
-
-/home/shesahuman/stuff/omelette/imgui/imgui_impl_opengl3.h:
-
 /usr/include/string.h:
 
 /home/shesahuman/stuff/omelette/primitive_generator.h:
-
-/usr/include/bits/sigaction.h:
 
 /usr/include/bits/sigcontext.h:
 
@@ -7016,9 +7094,3 @@ CMakeFiles/omelette.dir/imgui/imgui_draw.cpp.o:
 /usr/include/bits/flt-eval-method.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/amxtransposeintrin.h:
-
-/usr/include/glm/ext/vector_int2_sized.hpp:
-
-/home/shesahuman/stuff/omelette/imgui/imgui.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx10_2-512satcvtintrin.h:

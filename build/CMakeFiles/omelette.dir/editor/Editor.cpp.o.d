@@ -17,80 +17,51 @@ CMakeFiles/omelette.dir/editor/Editor.cpp.o: \
  /home/shesahuman/stuff/omelette/editor/../imgui/imgui_impl_glfw.h \
  /home/shesahuman/stuff/omelette/editor/../imgui/imgui_impl_opengl3.h \
  /home/shesahuman/stuff/omelette/editor/../World.h \
- /home/shesahuman/stuff/omelette/editor/../Object.h \
- /home/shesahuman/stuff/omelette/editor/../Mesh.h \
- /usr/include/c++/15.1.1/string \
- /usr/include/c++/15.1.1/bits/requires_hosted.h \
+ /usr/include/c++/15.1.1/algorithm \
+ /usr/include/c++/15.1.1/bits/stl_algobase.h \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
  /usr/include/c++/15.1.1/pstl/pstl_config.h \
- /usr/include/c++/15.1.1/bits/stringfwd.h \
- /usr/include/c++/15.1.1/bits/memoryfwd.h \
- /usr/include/c++/15.1.1/bits/char_traits.h \
- /usr/include/c++/15.1.1/bits/postypes.h /usr/include/c++/15.1.1/cwchar \
- /usr/include/wchar.h /usr/include/bits/floatn.h \
- /usr/include/bits/floatn-common.h /usr/include/bits/wchar.h \
- /usr/include/bits/types/wint_t.h /usr/include/bits/types/mbstate_t.h \
- /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
- /usr/include/bits/types/FILE.h /usr/include/c++/15.1.1/type_traits \
- /usr/include/c++/15.1.1/bits/version.h \
- /usr/include/c++/15.1.1/bits/allocator.h \
- /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
- /usr/include/c++/15.1.1/bits/new_allocator.h /usr/include/c++/15.1.1/new \
- /usr/include/c++/15.1.1/bits/exception.h \
  /usr/include/c++/15.1.1/bits/functexcept.h \
  /usr/include/c++/15.1.1/bits/exception_defines.h \
- /usr/include/c++/15.1.1/bits/move.h \
  /usr/include/c++/15.1.1/bits/cpp_type_traits.h \
- /usr/include/c++/15.1.1/bits/localefwd.h \
- /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++locale.h \
- /usr/include/c++/15.1.1/clocale /usr/include/locale.h \
- /usr/include/bits/locale.h /usr/include/c++/15.1.1/iosfwd \
- /usr/include/c++/15.1.1/cctype /usr/include/ctype.h \
- /usr/include/bits/types.h /usr/include/bits/typesizes.h \
- /usr/include/bits/time64.h /usr/include/bits/endian.h \
- /usr/include/bits/endianness.h \
- /usr/include/c++/15.1.1/bits/ostream_insert.h \
- /usr/include/c++/15.1.1/bits/cxxabi_forced.h \
+ /usr/include/c++/15.1.1/bits/version.h \
+ /usr/include/c++/15.1.1/type_traits \
+ /usr/include/c++/15.1.1/ext/type_traits.h \
+ /usr/include/c++/15.1.1/ext/numeric_traits.h \
+ /usr/include/c++/15.1.1/bits/stl_pair.h \
+ /usr/include/c++/15.1.1/bits/move.h \
+ /usr/include/c++/15.1.1/bits/utility.h \
+ /usr/include/c++/15.1.1/bits/stl_iterator_base_types.h \
  /usr/include/c++/15.1.1/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/15.1.1/bits/concept_check.h \
  /usr/include/c++/15.1.1/debug/assertions.h \
- /usr/include/c++/15.1.1/bits/stl_iterator_base_types.h \
  /usr/include/c++/15.1.1/bits/stl_iterator.h \
- /usr/include/c++/15.1.1/ext/type_traits.h \
  /usr/include/c++/15.1.1/bits/ptr_traits.h \
- /usr/include/c++/15.1.1/bits/stl_function.h \
- /usr/include/c++/15.1.1/backward/binders.h \
- /usr/include/c++/15.1.1/ext/numeric_traits.h \
- /usr/include/c++/15.1.1/bits/stl_algobase.h \
- /usr/include/c++/15.1.1/bits/stl_pair.h \
- /usr/include/c++/15.1.1/bits/utility.h \
  /usr/include/c++/15.1.1/debug/debug.h \
  /usr/include/c++/15.1.1/bits/predefined_ops.h \
  /usr/include/c++/15.1.1/bit /usr/include/c++/15.1.1/concepts \
- /usr/include/c++/15.1.1/bits/refwrap.h \
- /usr/include/c++/15.1.1/bits/invoke.h \
- /usr/include/c++/15.1.1/bits/range_access.h \
+ /usr/include/c++/15.1.1/bits/stl_algo.h \
+ /usr/include/c++/15.1.1/bits/algorithmfwd.h \
  /usr/include/c++/15.1.1/initializer_list \
- /usr/include/c++/15.1.1/bits/basic_string.h \
- /usr/include/c++/15.1.1/ext/alloc_traits.h \
- /usr/include/c++/15.1.1/bits/alloc_traits.h \
+ /usr/include/c++/15.1.1/bits/stl_heap.h \
+ /usr/include/c++/15.1.1/bits/uniform_int_dist.h \
+ /usr/include/c++/15.1.1/bits/stl_tempbuf.h /usr/include/c++/15.1.1/new \
+ /usr/include/c++/15.1.1/bits/exception.h \
  /usr/include/c++/15.1.1/bits/stl_construct.h \
- /usr/include/c++/15.1.1/string_view \
- /usr/include/c++/15.1.1/bits/functional_hash.h \
- /usr/include/c++/15.1.1/bits/hash_bytes.h \
- /usr/include/c++/15.1.1/bits/string_view.tcc \
- /usr/include/c++/15.1.1/ext/string_conversions.h \
  /usr/include/c++/15.1.1/cstdlib /usr/include/stdlib.h \
  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
- /usr/include/sys/types.h /usr/include/bits/types/clock_t.h \
- /usr/include/bits/types/clockid_t.h /usr/include/bits/types/time_t.h \
- /usr/include/bits/types/timer_t.h /usr/include/bits/stdint-intn.h \
- /usr/include/endian.h /usr/include/bits/byteswap.h \
- /usr/include/bits/uintn-identity.h /usr/include/sys/select.h \
- /usr/include/bits/select.h /usr/include/bits/types/sigset_t.h \
- /usr/include/bits/types/__sigset_t.h \
+ /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/time64.h \
+ /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h \
+ /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h \
+ /usr/include/bits/stdint-intn.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/endianness.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/uintn-identity.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/types/sigset_t.h /usr/include/bits/types/__sigset_t.h \
  /usr/include/bits/types/struct_timeval.h \
  /usr/include/bits/types/struct_timespec.h \
  /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h \
@@ -98,6 +69,41 @@ CMakeFiles/omelette.dir/editor/Editor.cpp.o: \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h /usr/include/c++/15.1.1/bits/std_abs.h \
+ /usr/include/c++/15.1.1/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/15.1.1/pstl/execution_defs.h \
+ /home/shesahuman/stuff/omelette/editor/../Object.h \
+ /usr/include/c++/15.1.1/string \
+ /usr/include/c++/15.1.1/bits/requires_hosted.h \
+ /usr/include/c++/15.1.1/bits/stringfwd.h \
+ /usr/include/c++/15.1.1/bits/memoryfwd.h \
+ /usr/include/c++/15.1.1/bits/char_traits.h \
+ /usr/include/c++/15.1.1/bits/postypes.h /usr/include/c++/15.1.1/cwchar \
+ /usr/include/wchar.h /usr/include/bits/wchar.h \
+ /usr/include/bits/types/wint_t.h /usr/include/bits/types/mbstate_t.h \
+ /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
+ /usr/include/bits/types/FILE.h /usr/include/c++/15.1.1/bits/allocator.h \
+ /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
+ /usr/include/c++/15.1.1/bits/new_allocator.h \
+ /usr/include/c++/15.1.1/bits/localefwd.h \
+ /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++locale.h \
+ /usr/include/c++/15.1.1/clocale /usr/include/locale.h \
+ /usr/include/bits/locale.h /usr/include/c++/15.1.1/iosfwd \
+ /usr/include/c++/15.1.1/cctype /usr/include/ctype.h \
+ /usr/include/c++/15.1.1/bits/ostream_insert.h \
+ /usr/include/c++/15.1.1/bits/cxxabi_forced.h \
+ /usr/include/c++/15.1.1/bits/stl_function.h \
+ /usr/include/c++/15.1.1/backward/binders.h \
+ /usr/include/c++/15.1.1/bits/refwrap.h \
+ /usr/include/c++/15.1.1/bits/invoke.h \
+ /usr/include/c++/15.1.1/bits/range_access.h \
+ /usr/include/c++/15.1.1/bits/basic_string.h \
+ /usr/include/c++/15.1.1/ext/alloc_traits.h \
+ /usr/include/c++/15.1.1/bits/alloc_traits.h \
+ /usr/include/c++/15.1.1/string_view \
+ /usr/include/c++/15.1.1/bits/functional_hash.h \
+ /usr/include/c++/15.1.1/bits/hash_bytes.h \
+ /usr/include/c++/15.1.1/bits/string_view.tcc \
+ /usr/include/c++/15.1.1/ext/string_conversions.h \
  /usr/include/c++/15.1.1/cstdio /usr/include/stdio.h \
  /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__fpos64_t.h \
  /usr/include/bits/types/struct_FILE.h \
@@ -114,6 +120,7 @@ CMakeFiles/omelette.dir/editor/Editor.cpp.o: \
  /usr/include/c++/15.1.1/bits/uses_allocator.h \
  /usr/include/c++/15.1.1/bits/uses_allocator_args.h \
  /usr/include/c++/15.1.1/tuple \
+ /home/shesahuman/stuff/omelette/editor/../Mesh.h \
  /home/shesahuman/stuff/omelette/editor/../VAO.h \
  /home/shesahuman/stuff/omelette/glad/include/glad/glad.h \
  /home/shesahuman/stuff/omelette/glad/include/KHR/khrplatform.h \
@@ -375,6 +382,7 @@ CMakeFiles/omelette.dir/editor/Editor.cpp.o: \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/15.1.1/bits/fstream.tcc \
  /home/shesahuman/stuff/omelette/editor/../EBO.h \
+ /home/shesahuman/stuff/omelette/editor/../AABB.h \
  /home/shesahuman/stuff/omelette/editor/../Camera.h \
  /usr/include/GLFW/glfw3.h \
  /home/shesahuman/stuff/omelette/editor/../shaderClass.h \

@@ -1,18 +1,28 @@
 CMakeFiles/omelette.dir/main.cpp.o: \
  /home/shesahuman/stuff/omelette/main.cpp /usr/include/stdc-predef.h \
  /home/shesahuman/stuff/omelette/Camera.h \
- /home/shesahuman/stuff/omelette/omelette_style.h \
- /usr/include/c++/15.1.1/vector \
- /usr/include/c++/15.1.1/bits/requires_hosted.h \
- /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
- /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
+ /home/shesahuman/stuff/omelette/editor/Editor.h \
+ /home/shesahuman/stuff/omelette/editor/../imgui/imgui.h \
+ /home/shesahuman/stuff/omelette/editor/../imgui/imconfig.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/float.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdarg.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stddef.h \
+ /usr/include/string.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
  /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
+ /usr/include/strings.h /usr/include/assert.h \
+ /home/shesahuman/stuff/omelette/editor/../imgui/imgui_impl_glfw.h \
+ /home/shesahuman/stuff/omelette/editor/../imgui/imgui_impl_opengl3.h \
+ /home/shesahuman/stuff/omelette/editor/../World.h \
+ /usr/include/c++/15.1.1/algorithm \
+ /usr/include/c++/15.1.1/bits/stl_algobase.h \
+ /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
  /usr/include/c++/15.1.1/pstl/pstl_config.h \
- /usr/include/c++/15.1.1/bits/stl_algobase.h \
  /usr/include/c++/15.1.1/bits/functexcept.h \
  /usr/include/c++/15.1.1/bits/exception_defines.h \
  /usr/include/c++/15.1.1/bits/cpp_type_traits.h \
@@ -32,66 +42,26 @@ CMakeFiles/omelette.dir/main.cpp.o: \
  /usr/include/c++/15.1.1/debug/debug.h \
  /usr/include/c++/15.1.1/bits/predefined_ops.h \
  /usr/include/c++/15.1.1/bit /usr/include/c++/15.1.1/concepts \
- /usr/include/c++/15.1.1/bits/allocator.h \
- /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
- /usr/include/c++/15.1.1/bits/new_allocator.h /usr/include/c++/15.1.1/new \
- /usr/include/c++/15.1.1/bits/exception.h \
- /usr/include/c++/15.1.1/bits/memoryfwd.h \
- /usr/include/c++/15.1.1/bits/stl_construct.h \
- /usr/include/c++/15.1.1/bits/stl_uninitialized.h \
- /usr/include/c++/15.1.1/ext/alloc_traits.h \
- /usr/include/c++/15.1.1/bits/alloc_traits.h \
- /usr/include/c++/15.1.1/bits/stl_vector.h \
+ /usr/include/c++/15.1.1/bits/stl_algo.h \
+ /usr/include/c++/15.1.1/bits/algorithmfwd.h \
  /usr/include/c++/15.1.1/initializer_list \
- /usr/include/c++/15.1.1/bits/stl_bvector.h \
- /usr/include/c++/15.1.1/bits/functional_hash.h \
- /usr/include/c++/15.1.1/bits/hash_bytes.h \
- /usr/include/c++/15.1.1/bits/refwrap.h \
- /usr/include/c++/15.1.1/bits/invoke.h \
- /usr/include/c++/15.1.1/bits/stl_function.h \
- /usr/include/c++/15.1.1/backward/binders.h \
- /usr/include/c++/15.1.1/bits/range_access.h \
- /usr/include/c++/15.1.1/bits/vector.tcc \
- /usr/include/c++/15.1.1/bits/memory_resource.h \
- /usr/include/c++/15.1.1/cstddef \
- /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stddef.h \
- /usr/include/c++/15.1.1/bits/uses_allocator.h \
- /usr/include/c++/15.1.1/bits/uses_allocator_args.h \
- /usr/include/c++/15.1.1/tuple /usr/include/c++/15.1.1/string \
- /usr/include/c++/15.1.1/bits/stringfwd.h \
- /usr/include/c++/15.1.1/bits/char_traits.h \
- /usr/include/c++/15.1.1/bits/postypes.h /usr/include/c++/15.1.1/cwchar \
- /usr/include/wchar.h /usr/include/bits/libc-header-start.h \
- /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdarg.h \
- /usr/include/bits/wchar.h /usr/include/bits/types/wint_t.h \
- /usr/include/bits/types/mbstate_t.h \
- /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
- /usr/include/bits/types/FILE.h /usr/include/bits/types/locale_t.h \
- /usr/include/bits/types/__locale_t.h \
- /usr/include/c++/15.1.1/bits/localefwd.h \
- /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++locale.h \
- /usr/include/c++/15.1.1/clocale /usr/include/locale.h \
- /usr/include/bits/locale.h /usr/include/c++/15.1.1/iosfwd \
- /usr/include/c++/15.1.1/cctype /usr/include/ctype.h \
- /usr/include/bits/types.h /usr/include/bits/typesizes.h \
- /usr/include/bits/time64.h /usr/include/bits/endian.h \
- /usr/include/bits/endianness.h \
- /usr/include/c++/15.1.1/bits/ostream_insert.h \
- /usr/include/c++/15.1.1/bits/cxxabi_forced.h \
- /usr/include/c++/15.1.1/bits/basic_string.h \
- /usr/include/c++/15.1.1/string_view \
- /usr/include/c++/15.1.1/bits/string_view.tcc \
- /usr/include/c++/15.1.1/ext/string_conversions.h \
+ /usr/include/c++/15.1.1/bits/stl_heap.h \
+ /usr/include/c++/15.1.1/bits/uniform_int_dist.h \
+ /usr/include/c++/15.1.1/bits/stl_tempbuf.h /usr/include/c++/15.1.1/new \
+ /usr/include/c++/15.1.1/bits/exception.h \
+ /usr/include/c++/15.1.1/bits/stl_construct.h \
  /usr/include/c++/15.1.1/cstdlib /usr/include/stdlib.h \
  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
- /usr/include/sys/types.h /usr/include/bits/types/clock_t.h \
- /usr/include/bits/types/clockid_t.h /usr/include/bits/types/time_t.h \
- /usr/include/bits/types/timer_t.h /usr/include/bits/stdint-intn.h \
- /usr/include/endian.h /usr/include/bits/byteswap.h \
- /usr/include/bits/uintn-identity.h /usr/include/sys/select.h \
- /usr/include/bits/select.h /usr/include/bits/types/sigset_t.h \
- /usr/include/bits/types/__sigset_t.h \
+ /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
+ /usr/include/sys/types.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/time64.h \
+ /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h \
+ /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h \
+ /usr/include/bits/stdint-intn.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/endianness.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/uintn-identity.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/bits/types/sigset_t.h /usr/include/bits/types/__sigset_t.h \
  /usr/include/bits/types/struct_timeval.h \
  /usr/include/bits/types/struct_timespec.h \
  /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h \
@@ -99,6 +69,41 @@ CMakeFiles/omelette.dir/main.cpp.o: \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-float.h /usr/include/c++/15.1.1/bits/std_abs.h \
+ /usr/include/c++/15.1.1/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/15.1.1/pstl/execution_defs.h \
+ /home/shesahuman/stuff/omelette/editor/../Object.h \
+ /usr/include/c++/15.1.1/string \
+ /usr/include/c++/15.1.1/bits/requires_hosted.h \
+ /usr/include/c++/15.1.1/bits/stringfwd.h \
+ /usr/include/c++/15.1.1/bits/memoryfwd.h \
+ /usr/include/c++/15.1.1/bits/char_traits.h \
+ /usr/include/c++/15.1.1/bits/postypes.h /usr/include/c++/15.1.1/cwchar \
+ /usr/include/wchar.h /usr/include/bits/wchar.h \
+ /usr/include/bits/types/wint_t.h /usr/include/bits/types/mbstate_t.h \
+ /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
+ /usr/include/bits/types/FILE.h /usr/include/c++/15.1.1/bits/allocator.h \
+ /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
+ /usr/include/c++/15.1.1/bits/new_allocator.h \
+ /usr/include/c++/15.1.1/bits/localefwd.h \
+ /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++locale.h \
+ /usr/include/c++/15.1.1/clocale /usr/include/locale.h \
+ /usr/include/bits/locale.h /usr/include/c++/15.1.1/iosfwd \
+ /usr/include/c++/15.1.1/cctype /usr/include/ctype.h \
+ /usr/include/c++/15.1.1/bits/ostream_insert.h \
+ /usr/include/c++/15.1.1/bits/cxxabi_forced.h \
+ /usr/include/c++/15.1.1/bits/stl_function.h \
+ /usr/include/c++/15.1.1/backward/binders.h \
+ /usr/include/c++/15.1.1/bits/refwrap.h \
+ /usr/include/c++/15.1.1/bits/invoke.h \
+ /usr/include/c++/15.1.1/bits/range_access.h \
+ /usr/include/c++/15.1.1/bits/basic_string.h \
+ /usr/include/c++/15.1.1/ext/alloc_traits.h \
+ /usr/include/c++/15.1.1/bits/alloc_traits.h \
+ /usr/include/c++/15.1.1/string_view \
+ /usr/include/c++/15.1.1/bits/functional_hash.h \
+ /usr/include/c++/15.1.1/bits/hash_bytes.h \
+ /usr/include/c++/15.1.1/bits/string_view.tcc \
+ /usr/include/c++/15.1.1/ext/string_conversions.h \
  /usr/include/c++/15.1.1/cstdio /usr/include/stdio.h \
  /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__fpos64_t.h \
  /usr/include/bits/types/struct_FILE.h \
@@ -110,15 +115,30 @@ CMakeFiles/omelette.dir/main.cpp.o: \
  /usr/include/bits/types/error_t.h \
  /usr/include/c++/15.1.1/bits/charconv.h \
  /usr/include/c++/15.1.1/bits/basic_string.tcc \
+ /usr/include/c++/15.1.1/bits/memory_resource.h \
+ /usr/include/c++/15.1.1/cstddef \
+ /usr/include/c++/15.1.1/bits/uses_allocator.h \
+ /usr/include/c++/15.1.1/bits/uses_allocator_args.h \
+ /usr/include/c++/15.1.1/tuple \
+ /home/shesahuman/stuff/omelette/editor/../Mesh.h \
+ /home/shesahuman/stuff/omelette/editor/../VAO.h \
+ /home/shesahuman/stuff/omelette/glad/include/glad/glad.h \
+ /home/shesahuman/stuff/omelette/glad/include/KHR/khrplatform.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
+ /usr/include/bits/stdint-least.h \
+ /home/shesahuman/stuff/omelette/editor/../VBO.h \
+ /home/shesahuman/stuff/omelette/editor/../omelette_style.h \
+ /usr/include/c++/15.1.1/vector \
+ /usr/include/c++/15.1.1/bits/stl_uninitialized.h \
+ /usr/include/c++/15.1.1/bits/stl_vector.h \
+ /usr/include/c++/15.1.1/bits/stl_bvector.h \
+ /usr/include/c++/15.1.1/bits/vector.tcc \
  /usr/include/glm/ext/matrix_transform.hpp \
  /usr/include/glm/gtc/constants.hpp \
  /usr/include/glm/ext/scalar_constants.hpp \
  /usr/include/glm/detail/setup.hpp /usr/include/c++/15.1.1/cassert \
- /usr/include/assert.h /usr/include/glm/simd/platform.h \
- /usr/include/c++/15.1.1/cstdint \
- /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h \
+ /usr/include/glm/simd/platform.h /usr/include/c++/15.1.1/cstdint \
  /usr/include/glm/ext/scalar_constants.inl /usr/include/c++/15.1.1/limits \
  /usr/include/glm/gtc/constants.inl /usr/include/glm/geometric.hpp \
  /usr/include/glm/detail/type_vec3.hpp \
@@ -257,7 +277,6 @@ CMakeFiles/omelette.dir/main.cpp.o: \
  /usr/include/bits/pthread_stack_min-dynamic.h \
  /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
  /usr/include/bits/uio_lim.h /usr/include/c++/15.1.1/cfloat \
- /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/float.h \
  /usr/include/glm/fwd.hpp /usr/include/glm/packing.hpp \
  /usr/include/glm/detail/func_packing.inl \
  /usr/include/glm/detail/type_half.hpp \
@@ -301,8 +320,7 @@ CMakeFiles/omelette.dir/main.cpp.o: \
  /usr/include/glm/ext/vector_int1_sized.hpp \
  /usr/include/glm/ext/vector_uint1.hpp \
  /usr/include/glm/ext/vector_uint1_sized.hpp \
- /usr/include/c++/15.1.1/cstring /usr/include/string.h \
- /usr/include/strings.h /usr/include/glm/gtc/type_ptr.inl \
+ /usr/include/c++/15.1.1/cstring /usr/include/glm/gtc/type_ptr.inl \
  /usr/include/glm/gtx/rotate_vector.hpp \
  /usr/include/glm/gtx/transform.hpp /usr/include/glm/gtx/transform.inl \
  /usr/include/glm/gtx/rotate_vector.inl \
@@ -363,20 +381,11 @@ CMakeFiles/omelette.dir/main.cpp.o: \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/15.1.1/bits/fstream.tcc \
- /home/shesahuman/stuff/omelette/glad/include/glad/glad.h \
- /home/shesahuman/stuff/omelette/glad/include/KHR/khrplatform.h \
+ /home/shesahuman/stuff/omelette/editor/../EBO.h \
+ /home/shesahuman/stuff/omelette/editor/../AABB.h \
  /usr/include/GLFW/glfw3.h /home/shesahuman/stuff/omelette/shaderClass.h \
  /usr/include/c++/15.1.1/sstream /usr/include/c++/15.1.1/bits/sstream.tcc \
- /usr/include/c++/15.1.1/iostream \
- /home/shesahuman/stuff/omelette/imgui/imgui.h \
- /home/shesahuman/stuff/omelette/imgui/imconfig.h \
- /home/shesahuman/stuff/omelette/imgui/imgui_impl_glfw.h \
- /home/shesahuman/stuff/omelette/imgui/imgui_impl_opengl3.h \
- /home/shesahuman/stuff/omelette/Mesh.h \
- /home/shesahuman/stuff/omelette/VAO.h \
+ /usr/include/c++/15.1.1/iostream /home/shesahuman/stuff/omelette/Mesh.h \
  /home/shesahuman/stuff/omelette/VBO.h \
- /home/shesahuman/stuff/omelette/EBO.h \
- /home/shesahuman/stuff/omelette/World.h \
- /home/shesahuman/stuff/omelette/Object.h \
- /home/shesahuman/stuff/omelette/editor/Editor.h \
- /home/shesahuman/stuff/omelette/print_helper.h
+ /home/shesahuman/stuff/omelette/print_helper.h \
+ /home/shesahuman/stuff/omelette/primitive_generator.h

@@ -365,7 +365,24 @@ CMakeFiles/omelette.dir/Mesh.cpp.o: \
  /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/15.1.1/bits/fstream.tcc \
  /home/shesahuman/stuff/omelette/EBO.h \
- /home/shesahuman/stuff/omelette/Camera.h /usr/include/GLFW/glfw3.h \
- /home/shesahuman/stuff/omelette/shaderClass.h \
+ /home/shesahuman/stuff/omelette/Camera.h \
+ /home/shesahuman/stuff/omelette/editor/Editor.h \
+ /home/shesahuman/stuff/omelette/editor/../imgui/imgui.h \
+ /home/shesahuman/stuff/omelette/editor/../imgui/imconfig.h \
+ /home/shesahuman/stuff/omelette/editor/../imgui/imgui_impl_glfw.h \
+ /home/shesahuman/stuff/omelette/editor/../imgui/imgui_impl_opengl3.h \
+ /home/shesahuman/stuff/omelette/editor/../World.h \
+ /usr/include/c++/15.1.1/algorithm \
+ /usr/include/c++/15.1.1/bits/stl_algo.h \
+ /usr/include/c++/15.1.1/bits/algorithmfwd.h \
+ /usr/include/c++/15.1.1/bits/stl_heap.h \
+ /usr/include/c++/15.1.1/bits/uniform_int_dist.h \
+ /usr/include/c++/15.1.1/bits/stl_tempbuf.h \
+ /usr/include/c++/15.1.1/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/15.1.1/pstl/execution_defs.h \
+ /home/shesahuman/stuff/omelette/editor/../Object.h \
+ /home/shesahuman/stuff/omelette/editor/../Mesh.h \
+ /home/shesahuman/stuff/omelette/editor/../AABB.h \
+ /usr/include/GLFW/glfw3.h /home/shesahuman/stuff/omelette/shaderClass.h \
  /usr/include/c++/15.1.1/sstream /usr/include/c++/15.1.1/bits/sstream.tcc \
  /usr/include/c++/15.1.1/iostream
