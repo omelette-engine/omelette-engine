@@ -4817,6 +4817,7 @@ CMakeFiles/omelette.dir/primitive_generator.cpp.o: /home/shesahuman/stuff/omelet
   /usr/include/c++/15.1.1/bits/cpp_type_traits.h \
   /usr/include/c++/15.1.1/bits/cxxabi_forced.h \
   /usr/include/c++/15.1.1/bits/cxxabi_init_exception.h \
+  /usr/include/c++/15.1.1/bits/erase_if.h \
   /usr/include/c++/15.1.1/bits/exception.h \
   /usr/include/c++/15.1.1/bits/exception_defines.h \
   /usr/include/c++/15.1.1/bits/exception_ptr.h \
@@ -4837,6 +4838,7 @@ CMakeFiles/omelette.dir/primitive_generator.cpp.o: /home/shesahuman/stuff/omelet
   /usr/include/c++/15.1.1/bits/move.h \
   /usr/include/c++/15.1.1/bits/nested_exception.h \
   /usr/include/c++/15.1.1/bits/new_allocator.h \
+  /usr/include/c++/15.1.1/bits/node_handle.h \
   /usr/include/c++/15.1.1/bits/ostream.h \
   /usr/include/c++/15.1.1/bits/ostream.tcc \
   /usr/include/c++/15.1.1/bits/ostream_insert.h \
@@ -4856,7 +4858,11 @@ CMakeFiles/omelette.dir/primitive_generator.cpp.o: /home/shesahuman/stuff/omelet
   /usr/include/c++/15.1.1/bits/stl_iterator.h \
   /usr/include/c++/15.1.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15.1.1/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15.1.1/bits/stl_map.h \
+  /usr/include/c++/15.1.1/bits/stl_multimap.h \
   /usr/include/c++/15.1.1/bits/stl_pair.h \
+  /usr/include/c++/15.1.1/bits/stl_relops.h \
+  /usr/include/c++/15.1.1/bits/stl_tree.h \
   /usr/include/c++/15.1.1/bits/stl_uninitialized.h \
   /usr/include/c++/15.1.1/bits/stl_vector.h \
   /usr/include/c++/15.1.1/bits/streambuf.tcc \
@@ -4886,6 +4892,7 @@ CMakeFiles/omelette.dir/primitive_generator.cpp.o: /home/shesahuman/stuff/omelet
   /usr/include/c++/15.1.1/debug/assertions.h \
   /usr/include/c++/15.1.1/debug/debug.h \
   /usr/include/c++/15.1.1/exception \
+  /usr/include/c++/15.1.1/ext/aligned_buffer.h \
   /usr/include/c++/15.1.1/ext/alloc_traits.h \
   /usr/include/c++/15.1.1/ext/atomicity.h \
   /usr/include/c++/15.1.1/ext/numeric_traits.h \
@@ -4898,6 +4905,7 @@ CMakeFiles/omelette.dir/primitive_generator.cpp.o: /home/shesahuman/stuff/omelet
   /usr/include/c++/15.1.1/iostream \
   /usr/include/c++/15.1.1/istream \
   /usr/include/c++/15.1.1/limits \
+  /usr/include/c++/15.1.1/map \
   /usr/include/c++/15.1.1/new \
   /usr/include/c++/15.1.1/ostream \
   /usr/include/c++/15.1.1/pstl/pstl_config.h \
@@ -4922,6 +4930,7 @@ CMakeFiles/omelette.dir/primitive_generator.cpp.o: /home/shesahuman/stuff/omelet
   /usr/include/c++/15.1.1/tuple \
   /usr/include/c++/15.1.1/type_traits \
   /usr/include/c++/15.1.1/typeinfo \
+  /usr/include/c++/15.1.1/utility \
   /usr/include/c++/15.1.1/vector \
   /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/atomic_word.h \
   /usr/include/c++/15.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
@@ -5711,8 +5720,6 @@ CMakeFiles/omelette.dir/Camera.cpp.o:
 
 /usr/lib/libglfw.so.3.4:
 
-/usr/lib/libc_nonshared.a:
-
 /usr/lib/libXdmcp.so.6:
 
 /usr/lib/libXau.so.6:
@@ -5730,6 +5737,20 @@ CMakeFiles/omelette.dir/Camera.cpp.o:
 /usr/lib/libm.so:
 
 /usr/lib/libgcc_s.so.1:
+
+/usr/include/c++/15.1.1/map:
+
+/usr/include/c++/15.1.1/ext/aligned_buffer.h:
+
+/usr/include/c++/15.1.1/bits/stl_tree.h:
+
+/usr/include/c++/15.1.1/bits/stl_relops.h:
+
+/usr/lib/libc_nonshared.a:
+
+/usr/include/c++/15.1.1/bits/stl_map.h:
+
+/usr/include/c++/15.1.1/bits/erase_if.h:
 
 /home/shesahuman/stuff/omelette/main.cpp:
 
@@ -5772,6 +5793,8 @@ CMakeFiles/omelette.dir/Camera.cpp.o:
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/sm3intrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/shaintrin.h:
+
+/usr/include/c++/15.1.1/bits/stl_multimap.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/sha512intrin.h:
 
@@ -5826,6 +5849,8 @@ CMakeFiles/omelette.dir/Camera.cpp.o:
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx512vpopcntdqvlintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx512vp2intersectvlintrin.h:
+
+/usr/include/c++/15.1.1/bits/node_handle.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/avx512vp2intersectintrin.h:
 
@@ -5932,6 +5957,8 @@ CMakeFiles/omelette.dir/main.cpp.o:
 /usr/include/c++/15.1.1/tr1/beta_function.tcc:
 
 /usr/include/bits/types/__fpos_t.h:
+
+/usr/include/c++/15.1.1/utility:
 
 /usr/include/bits/types/sig_atomic_t.h:
 

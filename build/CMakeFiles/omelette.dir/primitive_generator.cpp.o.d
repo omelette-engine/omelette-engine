@@ -372,4 +372,11 @@ CMakeFiles/omelette.dir/primitive_generator.cpp.o: \
  /home/shesahuman/stuff/omelette/EBO.h \
  /home/shesahuman/stuff/omelette/print_helper.h \
  /usr/include/c++/15.1.1/iostream /usr/include/c++/15.1.1/sstream \
- /usr/include/c++/15.1.1/bits/sstream.tcc
+ /usr/include/c++/15.1.1/bits/sstream.tcc /usr/include/c++/15.1.1/map \
+ /usr/include/c++/15.1.1/bits/stl_tree.h \
+ /usr/include/c++/15.1.1/ext/aligned_buffer.h \
+ /usr/include/c++/15.1.1/bits/node_handle.h \
+ /usr/include/c++/15.1.1/bits/stl_map.h \
+ /usr/include/c++/15.1.1/bits/stl_multimap.h \
+ /usr/include/c++/15.1.1/bits/erase_if.h /usr/include/c++/15.1.1/utility \
+ /usr/include/c++/15.1.1/bits/stl_relops.h

@@ -10,95 +10,41 @@
 #include "omelette_style.h"
 #include "editor/Editor.h"
 #include "print_helper.h"
+#include "primitive_generator.h"
 
 const unsigned int window_width = 800;
 const unsigned int window_height = 800;
 
-// Editor editor;
 World world;
-Editor editor(world);
 
-dynamic_array<Vertex> vertices = {
-    // Bottom face (y = 0)
-    Vertex{vector3(-0.5f, 0.0f,  0.5f), vector3( 0.0f, -1.0f,  0.0f), vector3(0.83f, 0.70f, 0.44f)}, // 0
-    Vertex{vector3(-0.5f, 0.0f, -0.5f), vector3( 0.0f, -1.0f,  0.0f), vector3(0.83f, 0.70f, 0.44f)}, // 1
-    Vertex{vector3( 0.5f, 0.0f, -0.5f), vector3( 0.0f, -1.0f,  0.0f), vector3(0.83f, 0.70f, 0.44f)}, // 2
-    Vertex{vector3( 0.5f, 0.0f,  0.5f), vector3( 0.0f, -1.0f,  0.0f), vector3(0.83f, 0.70f, 0.44f)}, // 3
-
-    // Apex vertex (for all triangular faces)
-    Vertex{vector3( 0.0f, 0.8f,  0.0f), vector3( 0.0f,  1.0f,  0.0f), vector3(0.92f, 0.86f, 0.76f)}, // 4
-
-    // Left face vertices (reuse base vertices but with correct normals)
-    Vertex{vector3(-0.5f, 0.0f,  0.5f), vector3(-0.707f, 0.5f,  0.5f), vector3(0.83f, 0.70f, 0.44f)}, // 5
-    Vertex{vector3(-0.5f, 0.0f, -0.5f), vector3(-0.707f, 0.5f, -0.5f), vector3(0.83f, 0.70f, 0.44f)}, // 6
-    Vertex{vector3( 0.0f, 0.8f,  0.0f), vector3(-0.707f, 0.707f, 0.0f), vector3(0.92f, 0.86f, 0.76f)}, // 7
-
-    // Back face vertices
-    Vertex{vector3(-0.5f, 0.0f, -0.5f), vector3( 0.0f, 0.5f, -0.707f), vector3(0.83f, 0.70f, 0.44f)}, // 8
-    Vertex{vector3( 0.5f, 0.0f, -0.5f), vector3( 0.0f, 0.5f, -0.707f), vector3(0.83f, 0.70f, 0.44f)}, // 9
-    Vertex{vector3( 0.0f, 0.8f,  0.0f), vector3( 0.0f, 0.707f, -0.707f), vector3(0.92f, 0.86f, 0.76f)}, // 10
-
-    // Right face vertices  
-    Vertex{vector3( 0.5f, 0.0f, -0.5f), vector3( 0.707f, 0.5f, -0.5f), vector3(0.83f, 0.70f, 0.44f)}, // 11
-    Vertex{vector3( 0.5f, 0.0f,  0.5f), vector3( 0.707f, 0.5f,  0.5f), vector3(0.83f, 0.70f, 0.44f)}, // 12
-    Vertex{vector3( 0.0f, 0.8f,  0.0f), vector3( 0.707f, 0.707f, 0.0f), vector3(0.92f, 0.86f, 0.76f)}, // 13
-
-    // Front face vertices
-    Vertex{vector3( 0.5f, 0.0f,  0.5f), vector3( 0.0f, 0.5f,  0.707f), vector3(0.83f, 0.70f, 0.44f)}, // 14
-    Vertex{vector3(-0.5f, 0.0f,  0.5f), vector3( 0.0f, 0.5f,  0.707f), vector3(0.83f, 0.70f, 0.44f)}, // 15
-    Vertex{vector3( 0.0f, 0.8f,  0.0f), vector3( 0.0f, 0.707f, 0.707f), vector3(0.92f, 0.86f, 0.76f)}  // 16
-};
-
-dynamic_array<GLuint> indices = {
-    // Bottom face (two triangles)
-    0, 1, 2,
-    0, 2, 3,
-    
-    // Side faces (each is one triangle)
-    5, 7, 6,   // Left face
-    8, 10, 9,  // Back face  
-    11, 13, 12, // Right face
-    14, 16, 15  // Front face
-};
-
-dynamic_array<Vertex> lightVertices = {
-	Vertex{vector3(-0.1f, -0.1f,  0.1f)},
-	Vertex{vector3(-0.1f, -0.1f, -0.1f)},
-	Vertex{vector3(0.1f, -0.1f, -0.1f)},
-	Vertex{vector3(0.1f, -0.1f,  0.1f)},
-	Vertex{vector3(-0.1f,  0.1f,  0.1f)},
-	Vertex{vector3(-0.1f,  0.1f, -0.1f)},
-	Vertex{vector3(0.1f,  0.1f, -0.1f)},
-	Vertex{vector3(0.1f,  0.1f,  0.1f)}
-};
-
-dynamic_array<GLuint> lightIndices = {
-	0, 1, 2,
-	0, 2, 3,
-	0, 4, 7,
-	0, 7, 3,
-	3, 7, 6,
-	3, 6, 2,
-	2, 6, 5,
-	2, 5, 1,
-	1, 5, 4,
-	1, 4, 0,
-	4, 5, 6,
-	4, 6, 7
+struct WindowData {
+    Camera* camera;
+    Editor* editor;
 };
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height){
     glViewport(0, 0, width, height);
-    Camera* camera = static_cast<Camera*>(glfwGetWindowUserPointer(window));
-    if(camera){
-        camera -> update_aspect_ratio((float)width, float(height));
+    WindowData* data = static_cast<WindowData*>(glfwGetWindowUserPointer(window));
+    if(data && data->camera){
+        data->camera->update_aspect_ratio((float)width, float(height));
     }
 }
 
 void scroll_callback(GLFWwindow* window, double x_offset, double y_offset){
-    Camera* camera = static_cast<Camera*>(glfwGetWindowUserPointer(window));
-    if(camera){
-        camera -> Zoom(y_offset);
+    WindowData* data = static_cast<WindowData*>(glfwGetWindowUserPointer(window));
+    if(data && data->camera){
+        data->camera->Zoom(y_offset);
+    }
+}
+
+void mouse_callback(GLFWwindow* window, int button, int action, int modifiers){
+    if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
+        double x_position, y_position;
+        glfwGetCursorPos(window, &x_position, &y_position);
+        WindowData* data = static_cast<WindowData*>(glfwGetWindowUserPointer(window));
+        if(data && data->editor){
+            data->editor->handle_clicks(x_position, y_position);
+        }
     }
 }
 
@@ -131,27 +77,30 @@ int main(){
     Shader shaderProgram("shaders/default.vert", "shaders/default.frag");
     Shader light_shader("shaders/light.vert", "shaders/light.frag");
     
-    // initialise meshes
-    Mesh pyramid(vertices, indices);
-    Mesh point_light(lightVertices, lightIndices);
 
     // light properties
-    vector4 light_colour = vector4(0.831f, 0.827f, 0.820f, 1.0f);
-    vector3 light_position = vector3(0.5f, 0.5f, 0.5f);
+    // vector4 light_colour = vector4(0.831f, 0.827f, 0.820f, 1.0f);
 
     // add objects
-    // world.add_object("Pyramid", &pyramid, vector3(0.0f, 0.0f, 0.0f), default_colour, default_shadow);
-    world.add_object("Point Light", &point_light, light_position, light_colour, light_colour);
-    log_info("Light cube position: " + std::to_string(light_position.x) + ", " + std::to_string(light_position.y) + ", " + std::to_string(light_position.z));
+    Mesh* default_light_mesh = generate_point_light();
+    if(default_light_mesh) {
+        world.add_light_object("Point Light", default_light_mesh, vector3(0.5f, 0.5f, 0.5f), light_colour, 1.0f);
+    }
 
     // camera
     Camera camera(window_width, window_height, vector3(0.0f, 0.0f, 2.0f));
     glfwSetWindowUserPointer(window, &camera);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glfwSetScrollCallback(window, scroll_callback);
+    glfwSetMouseButtonCallback(window, mouse_callback);
 
     // editor
+
+    Editor editor(world, camera);
     editor.initialise(window);
+
+    WindowData window_data = {&camera, &editor};
+    glfwSetWindowUserPointer(window, &window_data);
 
     // ========== main loop ==========
     while(!glfwWindowShouldClose(window)){
@@ -159,35 +108,45 @@ int main(){
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // camera
-        camera.Inputs(window);
+        camera.Inputs(window, editor);
         camera.update_matrix(45.0f, 0.1f, 100.0f);
 
         // rendering objects
         shaderProgram.Activate();
         camera.Matrix(shaderProgram, "camera_matrix");
         glUniform3f(glGetUniformLocation(shaderProgram.ID, "camera_position"), camera.Position.x, camera.Position.y, camera.Position.z);
-        glUniform3f(glGetUniformLocation(shaderProgram.ID, "light_position"), light_position.x, light_position.y, light_position.z);
 
+        editor.render_selected_outline(shaderProgram, camera);
+        editor.render_selected_gizmos(shaderProgram, camera);
+        
+        vector3 actual_light_position = vector3(-1000.0f, -1000.0f, -1000.0f);
         for(const auto& obj : world.get_objects()) {
-            if(obj.name != "Point Light") {
-                // Set all uniforms FIRST
+            if(obj.type == object_type::LIGHT) {
+                actual_light_position = obj.position;
+                break;
+            }
+        }
+        glUniform3f(glGetUniformLocation(shaderProgram.ID, "light_position"), actual_light_position.x, actual_light_position.y, actual_light_position.z);
+        
+        // render mesh objects
+        for(const auto& obj : world.get_objects()) {
+            if(obj.type == object_type::MESH) {
                 glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, get_raw_data(obj.model_matrix));
-                glUniform3f(glGetUniformLocation(shaderProgram.ID, "lit_colour"), obj.lit_colour.x, obj.lit_colour.y, obj.lit_colour.z);
-                glUniform3f(glGetUniformLocation(shaderProgram.ID, "shadow_colour"), obj.shadow_colour.x, obj.shadow_colour.y, obj.shadow_colour.z);
-                
-                // THEN render
-                obj.mesh->render();
+                glUniform3f(glGetUniformLocation(shaderProgram.ID, "lit_colour"), obj.mesh_data.lit_colour.x, obj.mesh_data.lit_colour.y, obj.mesh_data.lit_colour.z);
+                glUniform3f(glGetUniformLocation(shaderProgram.ID, "shadow_colour"), obj.mesh_data.shadow_colour.x, obj.mesh_data.shadow_colour.y, obj.mesh_data.shadow_colour.z);
+                obj.mesh_data.mesh->render();
             }
         }
         
+        // render light objects
         light_shader.Activate();
         camera.Matrix(light_shader, "camera_matrix");
-        glUniform3f(glGetUniformLocation(light_shader.ID, "camera_position"), camera.Position.x, camera.Position.y, camera.Position.z);
-        if(!world.get_objects().empty()) {
-            const auto& light_obj = world.get_objects()[0];
-            glUniformMatrix4fv(glGetUniformLocation(light_shader.ID, "model"), 1, GL_FALSE, get_raw_data(light_obj.model_matrix));
-            glUniform4f(glGetUniformLocation(light_shader.ID, "light_colour"), light_colour.x, light_colour.y, light_colour.z, light_colour.w);
-            light_obj.mesh->render();
+        for(const auto& obj : world.get_objects()) {
+            if(obj.type == object_type::LIGHT) {
+                glUniformMatrix4fv(glGetUniformLocation(light_shader.ID, "model"), 1, GL_FALSE, get_raw_data(obj.model_matrix));
+                glUniform3f(glGetUniformLocation(light_shader.ID, "light_colour"), obj.light_data.light_colour.x, obj.light_data.light_colour.y, obj.light_data.light_colour.z);
+                obj.light_data.mesh->render();
+            }
         }
 
         editor.begin_frame();

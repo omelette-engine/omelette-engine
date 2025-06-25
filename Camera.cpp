@@ -1,7 +1,14 @@
 #include"Camera.h"
+#include "editor/Editor.h"
 #include "imgui/imgui.h"
 #include <GLFW/glfw3.h>
 #include "omelette_style.h"
+#include <algorithm>
+#include "AABB.h"
+#include "Object.h"
+#include "print_helper.h"
+
+bool f_key_was_pressed = false;
 
 
 Camera::Camera(int width, int height, vector3 position){
@@ -15,12 +22,10 @@ Camera::Camera(int width, int height, vector3 position){
 	matrix4 view = matrix4(1.0f);
 	matrix4 projection = matrix4(1.0f);
 
-	// Makes camera look in the right direction from the right position
 	view = look_at(Position, Position + Orientation, Up);
-	// Adds perspective to the scene
+
 	projection = perspective(degrees_to_radians(field_of_view), (float)width / height, near_plane, far_plane);
 
-	// Exports the camera matrix to the Vertex Shader
 	camera_matrix = projection * view;
 }
 
@@ -29,59 +34,62 @@ void Camera::Matrix(Shader& shader, const char* uniform){
 }
 
 
-void Camera::Inputs(GLFWwindow* window){
-	ImGuiIO& io = ImGui::GetIO(); (void)io;
-	if(!io.WantCaptureMouse){
-		// Handles key inputs
-		if(glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS){
-			Position += speed * Orientation;
-		}
-		if(glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS){
-			Position -= speed * Orientation;
-		}
+void Camera::Inputs(GLFWwindow* window, Editor& editor){
+    ImGuiIO& io = ImGui::GetIO(); (void)io;
+    if(!io.WantCaptureMouse){
+        // handles key inputs
+        if(glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS){
+            Position += speed * Orientation;
+        }
+        if(glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS){
+            Position -= speed * Orientation;
+        }
+        
+        bool f_key_is_pressed = glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS;
+        if (f_key_is_pressed && !f_key_was_pressed) {
+            if (editor.has_selection()) {
+                auto* selected_obj = editor.world.get_object(editor.selected_object_name);
+                if (selected_obj) {
+                    frame_selected_object(*selected_obj);
+                }
+            }
+        }
+        f_key_was_pressed = f_key_is_pressed;
 
-		// Handles mouse inputs
-		if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_MIDDLE) == GLFW_PRESS){
-			// Hides mouse cursor
-			glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
+        // orbit camera
+        if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_MIDDLE) == GLFW_PRESS){
+            glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
 
-			// Prevents camera from jumping on the first click
-			if (first_click){
-				glfwSetCursorPos(window, width / 2.0, height / 2.0);
-				first_click = false;
-			}
+            double mouse_x, mouse_y;
+            glfwGetCursorPos(window, &mouse_x, &mouse_y);
 
-			// Stores the coordinates of the cursor
-			double mouse_x;
-			double mouse_y;
-			// Fetches the coordinates of the cursor
-			glfwGetCursorPos(window, &mouse_x, &mouse_y);
+            if (!first_click) {
+                float delta_x = sensitivity * (float)(mouse_x - last_mouse_x) / width;
+                float delta_y = sensitivity * (float)(mouse_y - last_mouse_y) / height;
 
-			// Normalizes and shifts the coordinates of the cursor such that they begin in the middle of the screen
-			// and then "transforms" them into degrees 
-			float x_rotation = sensitivity * (float)(mouse_y - (height / 2.0)) / height;
-			float y_rotation = sensitivity * (float)(mouse_x - (width / 2.0)) / width;
+                orbit_yaw += delta_x;
+                orbit_pitch += delta_y;
+                
+                orbit_pitch = std::max(-1.5f, std::min(1.5f, orbit_pitch));
+                update_orbit_position();
+            } else {
+                orbit_distance = length(Position - pivot_point);
 
-			// Calculates upcoming vertical change in the Orientation
-			vector3 new_orientation = rotate_vector(Orientation, -x_rotation, normalise(cross_product(Orientation, Up)));
-
-			// Decides whether or not the next vertical Orientation is legal or not
-			if(absolute_value(angle_between_vectors(new_orientation, Up) - 90.0f) <= 85.0f){
-				Orientation = new_orientation;
-			}
-
-			// Rotates the Orientation left and right
-			Orientation = rotate_vector(Orientation, -y_rotation, Up);
-
-			// Sets mouse cursor to the middle of the screen so that it doesn't end up roaming around
-			glfwSetCursorPos(window, width / 2.0, height / 2.0);
-		} else if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_MIDDLE) == GLFW_RELEASE){
-			// Unhides cursor since camera is not looking around anymore
-			glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
-			// Makes sure the next time the camera looks around it doesn't jump
-			first_click = true;
-		}
-	}
+                vector3 to_camera = Position - pivot_point;
+                orbit_yaw = atan2(to_camera.z, to_camera.x);
+                orbit_pitch = asin(to_camera.y / orbit_distance);
+    
+                first_click = false;
+            }
+            
+            last_mouse_x = mouse_x;
+            last_mouse_y = mouse_y;
+    
+} else if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_MIDDLE) == GLFW_RELEASE){
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+    first_click = true;
+}
+    }
 }
 
 void Camera::update_aspect_ratio(float new_width, float new_height){
@@ -92,4 +100,24 @@ void Camera::update_aspect_ratio(float new_width, float new_height){
 
 void Camera::Zoom(double y_offset){
 	Position += (float)y_offset * speed * Orientation;
+}
+
+void Camera::frame_selected_object(const Object& obj) {
+    AABB world_aabb = obj.get_world_aabb();
+    pivot_point = (world_aabb.min + world_aabb.max) * 0.5f;
+    
+    vector3 size = world_aabb.max - world_aabb.min;
+    float max_dimension = std::max({size.x, size.y, size.z});
+    orbit_distance = max_dimension * 2.0f;
+    
+    update_orbit_position();
+}
+
+
+void Camera::update_orbit_position(){
+	Position.x = pivot_point.x + orbit_distance * cos(orbit_pitch) * cos(orbit_yaw);
+    Position.y = pivot_point.y + orbit_distance * sin(orbit_pitch);
+    Position.z = pivot_point.z + orbit_distance * cos(orbit_pitch) * sin(orbit_yaw);
+        
+    Orientation = normalise(pivot_point - Position);
 }

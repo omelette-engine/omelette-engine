@@ -3,3 +3,4 @@
 #include "Mesh.h"
 
 Mesh* generate_primitive(const string& primitive_type);
+Mesh* generate_point_light();

@@ -5,8 +5,10 @@
 
 #include"VAO.h"
 #include"EBO.h"
-#include"Camera.h"
 #include "omelette_style.h"
+
+class Camera;
+class Shader;
 
 class Mesh {
 public:
